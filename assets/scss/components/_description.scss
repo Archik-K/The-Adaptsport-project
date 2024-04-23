@@ -9,7 +9,7 @@
 	grid-template-columns: repeat(2, 1fr);
 	padding: 0 14rem 0 14rem;
 	width: 70rem;
-	gap: 2rem;
+	gap: 3rem;
 	justify-items: center;
 	align-items: center;
 }
@@ -24,9 +24,12 @@
 		hsl(237, 88%, 91%)
 	);
 	border-radius: 10px;
-	/* &__paragraph_one {
-		@extend %font-family-rubik !optional;
-	} */
+	&__paragraph_one {
+		@extend %font-family-aromo;
+	}
+	&__paragraph_two {
+		@extend %font-family-aromo_700;
+	}
 }
 
 .block-directions_of_the_organization {
