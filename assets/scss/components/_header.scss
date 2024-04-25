@@ -1,0 +1,78 @@
+.header {
+	background: url(/assets/icons/1612746203_34-p-fon-drim-art-goluboi-59.png);
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(2, 2fr);
+	grid-template-areas:
+		"N A B B C C"
+		"N A B B R R"
+		"N A B B D D"
+		"N A B B F F"
+		"W W W W W W";
+	align-content: stretch;
+	justify-items: end;
+	align-items: center;
+	&__logo__img {
+		width: 15rem;
+	}
+	&__logo {
+		grid-area: A;
+	}
+	&__title {
+		margin: 2rem 2rem 2rem 2rem;
+		width: 35rem;
+		text-align: center;
+		color: $accent-color;
+		grid-area: B;
+		@extend %rubik-family-text;
+	}
+	&__contact_email {
+		grid-area: R;
+		font-size: 0.9rem;
+		@extend %margin-contact-header;
+	}
+	&__contact_phone {
+		grid-area: C;
+		font-size: 1.4rem;
+		@extend %margin-contact-header;
+	}
+	&__phone,
+	&__email {
+		@extend %rubik-family-text;
+		color: $accent-color;
+	}
+	&__social {
+		grid-area: D;
+		font-size: 0.9rem;
+		@extend %margin-contact-header;
+	}
+	&__requisites {
+		grid-area: F;
+		font-size: 0.9rem;
+		color: $accent-color;
+		@extend %rubik-family-text;
+		@extend %margin-contact-header;
+	}
+}
+.menu {
+	width: 100%;
+	display: flex;
+	grid-area: W;
+	background-color: #f9fcff;
+	&__list {
+		display: flex;
+		text-align: center;
+		width: 100%;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+	&__item {
+		list-style: none;
+	}
+	&__link {
+		color: $menu-color;
+		text-decoration: none;
+		@extend %rubik-family-text;
+		text-shadow: 1px 1px 2px rgb(143, 143, 143);
+	}
+}
