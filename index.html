@@ -1,230 +1,196 @@
-
-        <!DOCTYPE html>
-<html lang="ru">
-
-<head>
-	<title>Главная</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240423213023">
-	<link rel="shortcut icon" href="favicon.ico">
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
-	<div class="wrapper">
-		<header class="header">
-			<div class="header__container _container">
-				<div class="header__content content">
-					<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="" class="content__logo"></picture>
-					<p class="content__description">
-						ВРООИ «Адаптспорт» - это сообщество, созданное родителями детей с ограниченными возможностями здоровья
-					</p>
-					<div class="content__contact-info contact-info">
-						<a href="tel:+79529535500" class="contact-info__phone">+7 (952) 953-55-00</a>
-						<a href="mailto:info@adaptsport.org" class="contact-info__email">info@adaptsport.org </a>
-						<div class="contact-info__social-links social-links">
-							<a href="" class="link link_vk"></a>
-							<a href="" class="link link_ok"></a>
-						</div>
-						<a href="" class="contact-info__requisities">Реквизиты</a>
-
-					</div>
-				</div>
-				<div class="header__menu menu">
-					<button type="button" class="menu__icon icon-menu"><span></span></button>
-					<nav class="menu__body">
-						<ul class="menu__list">
-							<li class="menu__item">
-								<a href="" class="menu__link">
-									Направления
-								</a>
-							</li>
-							<li class="menu__item">
-								<a href="" class="menu__link">
-									Занятия
-								</a>
-							</li>
-							<li class="menu__item">
-								<a href="" class="menu__link">
-									Проекты
-								</a>
-							</li>
-							<li class="menu__item">
-								<a href="" class="menu__link">
-									Новости
-								</a>
-							</li>
-							<li class="menu__item">
-								<a href="" class="menu__link">
-									Партнёры
-								</a>
-							</li>
-							<li class="menu__item">
-								<a href="" class="menu__link">
-									Контакты
-								</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</header>
-		<main class="page">
-
-		</main>
-		<footer class="footer">
-			<div class="footer__container">
-			</div>
-		</footer>
-	</div>
-	<script src="js/app.min.js?_v=20240423213023"></script>    
-            
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" href="./assets/icons/adapt_sport.png" type="image/png" />
+		<link rel="icon" href="./assets/icons/icon.png" type="image/png" />
 		<link rel="stylesheet" href="./assets/style/style.css" />
 		<title>Адаптспорт - Главная</title>
 	</head>
 	<body>
 		<div class="grid-container">
 			<header class="header">
-				<a href="./index.html" class="header-logo">
+				<a href="./index.html" class="header__logo">
 					<img
-						src="./assets/icons/01."
+						src="./assets/icons/adapt_sport.png"
 						alt="Логотип"
-						class="header-logo__img"
+						class="header__logo__img"
 					/>
 				</a>
-				<div class="header-title">
+				<p class="header__title">
 					ВРООИ «Адаптспорт» - это сообщество, созданное родителями детей с
 					ограниченными возможностями здоровья
+				</p>
+				<div class="header__contact_phone">
+					<a href="tel:+79529535500" class="header__phone"
+						>+7 (952) 953-55-00</a
+					>
 				</div>
-				<div class="header-contact">
-					<div class="header-contact_phone">
-						<a href="tel:+79529535500">+7 (952) 953-55-00</a>
-					</div>
-					<div class="header-contact_email">
-						<a href="mailto:info@adaptsport.org">info@adaptsport.org</a>
-					</div>
+				<div class="header__contact_email">
+					<a href="mailto:info@adaptsport.org" class="header__email"
+						>info@adaptsport.org</a
+					>
 				</div>
-				<div class="header-social">
-					<a href="#" class="header-social__link">
+				<div class="header__social">
+					<a href="https://vk.com/adaptsport">
 						<img
-							src="./assets/icons/vk_2111765 (1).png"
+							src="./assets/icons/vk.png"
 							alt="VK"
 							class="header-social__icon"
 						/>
 					</a>
+					<a href="https://ok.ru/group/55794821890054">
+						<img
+							src="./assets/icons/ok.png"
+							alt="ОК"
+							class="header-social__icon"
+						/>
+					</a>
 				</div>
+				<p class="header__requisites"><a href="images/xxx.jpg">Реквезиты</a></p>
+				<nav class="menu">
+					<ul class="menu__list" id="menu">
+						<li class="menu__item">
+							<a class="menu__link" href="#title">Направления</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#join">Занятия</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#event">Проекты</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#bot">Новости</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#bot">Партнёры</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#bot">Контакты</a>
+						</li>
+					</ul>
+				</nav>
 			</header>
 
-			<div class="main-content">
-				<iframe
-					width="560"
-					height="315"
-					src="https://www.youtube.com/embed/wBQmCdRFy7s?si=sLghLuuAEaIMUYrv"
-					title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					referrerpolicy="strict-origin-when-cross-origin"
-					allowfullscreen
-				></iframe>
-				<div class="block-text">
-					<p class="block-text__paragraph_one">
-						Деятельность организации направлена на социализацию и адаптацию лиц
-						с ограниченными возможностями здоровья в обществе. Мы неравнодушны к
-						проблемам инвалидов и своей работой хотим показать, что все вместе
-						мы можем изменить в лучшую сторону даже самые сложные ситуации. В
-						нашу организацию входят уже более 320 семей, воспитывающих детей с
-						ограниченными возможностями.
-					</p>
-					<p class="block-text__paragraph_two">
-						Целями деятельности организации является объединение людей с
-						ограниченными возможностями здоровья и их семей для оказания им
-						комплексной помощи.
-					</p>
-				</div>
-			</div>
-	
-			<div class="block">
-				<div class="block-directions_of_the_organization">
-					<h1 class="block__h1">
-						ОСНОВНЫЕ НАПРАВЛЕНИЯ ОРГАНИЗАЦИИ
-					</h1>
-						<div class="block__grid-row_1">
-							<div class="block-paragraph_about_help">
-							<img
-								src="./assets/icons/8b211279-no-bg-HD.png"
-								alt="Иконка"
-								class="block__icon"
-							/>
-							<p>
-								Содействие в получении психологической, социальной,
-								консультативной, финансовой, материальной, правовой помощи
-								реабилитации и адаптации лицам с ограниченными возможностями
-								здоровья
-							</p></div>
-							<div class="block-paragraph_about_sports">
-							<img
-								src="./assets/icons/3d80c6d0-no-bg-HD.png"
-								alt="Иконка"
-								class="block__icon"
-							/>
-							<p>
-								Создание условий для занятия различными видами спорта,
-								содействие формированию и развитию творческих навыков у лиц с
-								ограниченными возможностями здоровья
-							</p></div>
-							<div class="block-paragraph_about_education">
-							<img
-								src="./assets/icons/7c6ec55e-no-bg-HD.png"
-								alt="Иконка"
-								class="block__icon"
-							/>
-							<p>
-								Содействие в профориентационном обучении лиц с ограниченными
-								возможностями здоровья с целью дальнейшего трудоустройства
-							</p></div>
+			<main class="main-content">
+				<section class="main-content__section_introduction">
+					<div class="main-content__block_video">
+						<iframe
+							width="560"
+							height="315"
+							src="https://www.youtube.com/embed/wBQmCdRFy7s?si=P-vITSt2oo822hOh"
+							title="YouTube video player"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin"
+							allowfullscreen
+						></iframe>
+					</div>
+					<div class="main-content__block-text">
+						<p class="main-content__block-text__paragraph_one">
+							Деятельность организации направлена на социализацию и адаптацию
+							лиц с ограниченными возможностями здоровья в обществе. Мы
+							неравнодушны к проблемам инвалидов и своей работой хотим показать,
+							что все вместе мы можем изменить в лучшую сторону даже самые
+							сложные ситуации. В нашу организацию входят уже более 320 семей,
+							воспитывающих детей с ограниченными возможностями.
+						</p>
+						<p class="main-content__block-text__paragraph_two">
+							Целями деятельности организации является объединение людей с
+							ограниченными возможностями здоровья и их семей для оказания им
+							комплексной помощи.
+						</p>
+					</div>
+				</section>
+				<section class="main-content__section_directions">
+					<div class="main-content__block-directions_organization">
+						<h1 class="main-content__h1">ОСНОВНЫЕ НАПРАВЛЕНИЯ ОРГАНИЗАЦИИ</h1>
+						<div class="main-content__grid-row_1">
+							<div class="main-content__paragraph_about_help">
+								<img
+									src="./assets/icons/8b211279-no-bg-HD.png"
+									alt="Иконка"
+									class="block__icon"
+								/>
+								<p class="main-content__text-directions">
+									Содействие в получении психологической, социальной,
+									консультативной, финансовой, материальной, правовой помощи
+									реабилитации и адаптации лицам с ограниченными возможностями
+									здоровья
+								</p>
+							</div>
+							<div class="main-content__paragraph_about_sports">
+								<img
+									src="./assets/icons/3d80c6d0-no-bg-HD.png"
+									alt="Иконка"
+									class="block__icon"
+								/>
+								<p class="main-content__text-directions">
+									Создание условий для занятия различными видами спорта,
+									содействие формированию и развитию творческих навыков у лиц с
+									ограниченными возможностями здоровья
+								</p>
+							</div>
+							<div class="main-content__paragraph_about_education">
+								<img
+									src="./assets/icons/7c6ec55e-no-bg-HD.png"
+									alt="Иконка"
+									class="block__icon"
+								/>
+								<p class="main-content__text-directions">
+									Содействие в профориентационном обучении лиц с ограниченными
+									возможностями здоровья с целью дальнейшего трудоустройства
+								</p>
+							</div>
 						</div>
-						<div class="block__grid-row_2">
-							<div class="block-paragraph_about_culture">
-							<img
-								src="./assets/icons/73f1391d-no-bg-HD.png"
-								alt="Иконка"
-								class="block__icon"
-							/>
-							<p>
-								Организация культурно – просветительских мероприятий и досуга
-								лиц с ограниченными возможностями здоровья, членов их семей
-							</p></div>
-							<div class="block-paragraph_about_sociality">
-							<img
-								src="./assets/icons/94d7cee9-no-bg-HD.png"
-								alt="Иконка"
-								class="block__icon"
-							/>
-							<p>
-								Формирование в обществе толерантного отношения к лицам с
-								ограниченными возможностями здоровья, оказание помощи в их
-								семейной и общественной интеграции
-							</p></div>
-							<div class="block-paragraph_about_sociality">
-							<img
-								src="./assets/icons/f38b1901-no-bg-HD.png"
-								alt="Иконка"
-								class="block__icon"
-							/>
-							<p>Просветительская деятельность</p></div>
+						<div class="main-content__grid-row_2">
+							<div class="main-content__paragraph_about_culture">
+								<img
+									src="./assets/icons/73f1391d-no-bg-HD.png"
+									alt="Иконка"
+									class="block__icon"
+								/>
+								<p class="main-content__text-directions">
+									Организация культурно – просветительских мероприятий и досуга
+									лиц с ограниченными возможностями здоровья, членов их семей
+								</p>
+							</div>
+							<div class="main-content__paragraph_about_sociality">
+								<img
+									src="./assets/icons/94d7cee9-no-bg-HD.png"
+									alt="Иконка"
+									class="block__icon"
+								/>
+								<p class="main-content__text-directions">
+									Формирование в обществе толерантного отношения к лицам с
+									ограниченными возможностями здоровья, оказание помощи в их
+									семейной и общественной интеграции
+								</p>
+							</div>
+							<div class="main-content__paragraph_about_sociality">
+								<img
+									src="./assets/icons/f38b1901-no-bg-HD.png"
+									alt="Иконка"
+									class="block__icon"
+								/>
+								<p class="main-content__text-directions">
+									Просветительская деятельность
+								</p>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>
+					<section>
+						<img src="./assets/icons/family.png" alt="icon" />
+						<h1>
+							Предметом деятельности Организации является помощь в интеграции и
+							социальная адаптация, реабилитация и абилитация лиц с
+							ограниченными возможностями здоровья, содействие улучшению
+							качества жизни их семей.
+						</h1>
+					</section>
+				</section>
+			</main>
 		</div>
+		<script src="./assets/script/script.js"></script>
 	</body>
 </html>

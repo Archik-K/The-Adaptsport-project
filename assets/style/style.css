@@ -7,6 +7,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("https://fonts.googleapis.com/css2?family=Arimo:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital@0;1&family=Rubik:ital,wght@0,518;1,518&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -312,52 +313,154 @@ template {
   display: none;
 }
 
+.main-content__text-directions, .main-content__grid-row_2, .main-content__grid-row_1, .main-content__block-text__paragraph_one {
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-content__h1, .main-content__block-text__paragraph_two {
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.menu__link, .header__requisites, .header__phone, .header__email, .header__title {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.header__requisites, .header__social, .header__contact_phone, .header__contact_email {
+  margin: 0.5rem 6rem 0.1rem 0rem;
+}
+
+/*  тут пишем то что мы используем часто
+ */
+.header {
+  background: url(/assets/icons/1612746203_34-p-fon-drim-art-goluboi-59.png);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 2fr);
+  grid-template-areas: "N A B B C C" "N A B B R R" "N A B B D D" "N A B B F F" "W W W W W W";
+  align-content: stretch;
+  justify-items: end;
+  align-items: center;
+}
+.header__logo__img {
+  width: 15rem;
+}
+.header__logo {
+  grid-area: A;
+}
+.header__title {
+  margin: 2rem 2rem 2rem 2rem;
+  width: 35rem;
+  text-align: center;
+  color: #007ab6;
+  grid-area: B;
+}
+.header__contact_email {
+  grid-area: R;
+  font-size: 0.9rem;
+}
+.header__contact_phone {
+  grid-area: C;
+  font-size: 1.4rem;
+}
+.header__phone, .header__email {
+  color: #007ab6;
+}
+.header__social {
+  grid-area: D;
+  font-size: 0.9rem;
+}
+.header__requisites {
+  grid-area: F;
+  font-size: 0.9rem;
+  color: #007ab6;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  grid-area: W;
+  background-color: #f9fcff;
+}
+.menu__list {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.menu__item {
+  list-style: none;
+}
+.menu__link {
+  color: #006292;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px rgb(143, 143, 143);
+}
+
 .grid-container {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100%;
+  width: 100%;
 }
 
 .main-content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 0 14rem 0 14rem;
-  width: 70rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "introduction introduction introduction introduction" "directions directions directions directions" "M    M    M  M";
+  height: 40rem;
   gap: 3rem;
   justify-items: center;
   align-items: center;
 }
-
-.block-text {
+.main-content__section_introduction {
+  grid-area: introduction;
+  display: grid;
+  justify-items: center;
+  margin: 2rem;
+  grid-template-areas: "video_main text_main";
+}
+.main-content__section_directions {
+  grid-area: directions;
+}
+.main-content__block_video {
+  grid-area: video_main;
+}
+.main-content__block-text {
   width: 40rem;
   padding: 2rem;
+  margin: 2rem;
+  grid-area: text_main;
   background: linear-gradient(45deg, hsla(184, 78%, 93%, 0.788), hsl(212, 92%, 90%), hsl(237, 88%, 91%));
-  border-radius: 10px;
+  border-radius: 62px;
 }
-.block-directions_of_the_organization {
+.main-content__block-directions_organization {
   display: grid;
+  align-items: center;
   justify-items: center;
   grid-template-areas: "A    A    A " "B    f    C " "B    f    C";
   background-color: hsl(240, 90%, 96%);
 }
-
-.block__h1 {
+.main-content__h1 {
   grid-area: A;
 }
-
-.block__grid-row_1 {
+.main-content__grid-row_1 {
   grid-area: B;
 }
-
-.block__grid-row_2 {
+.main-content__grid-row_2 {
   grid-area: C;
 }
-
-.block-paragraph_about_help,
-.block-paragraph_about_sports,
-.block-paragraph_about_education,
-.block-paragraph_about_culture,
-.block-paragraph_about_sociality {
+.main-content__paragraph_about_help, .main-content__paragraph_about_sports, .main-content__paragraph_about_education, .main-content__paragraph_about_culture, .main-content__paragraph_about_sociality {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
@@ -365,23 +468,8 @@ template {
   -moz-column-gap: 20px;
        column-gap: 20px;
   margin: 1rem;
-  width: 40rem;
+  width: 33rem;
 }
-
 .block__icon {
-  max-width: 100px; /* задайте максимальную ширину изображения по вашему усмотрению */
-}
-
-.block-text__paragraph_one {
-  font-family: "Arimo", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.block-text__paragraph_two {
-  font-family: "Arimo", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
+  max-width: 4.5rem;
 }/*# sourceMappingURL=style.css.map */
