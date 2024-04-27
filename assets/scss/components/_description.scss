@@ -13,7 +13,6 @@
 		"introduction introduction introduction introduction"
 		"directions directions directions directions"
 		"M    M    M  M";
-	height: 40rem;
 	gap: 3rem;
 	justify-items: center;
 	align-items: center;
@@ -26,6 +25,7 @@
 	}
 	&__section_directions {
 		grid-area: directions;
+		width: 100%;
 	}
 	&__block_video {
 		grid-area: video_main;
@@ -58,6 +58,7 @@
 			"B    f    C "
 			"B    f    C";
 		background-color: hsl(240, 90%, 96%);
+		width: 100%;
 	}
 	&__h1 {
 		grid-area: A;
@@ -87,8 +88,30 @@
 	&__text-directions {
 		@extend %font-family-aromo;
 	}
+	&__section-text {
+		display: grid;
+		grid-template-areas:
+			"D A A "
+			"D B B";
+		width: 753px;
+		margin: 2rem 0rem 2rem 30rem;
+		justify-content: center;
+		justify-items: center;
+		&__paragraph_purpose {
+			margin: 3rem 1rem 0rem 1rem;
+			grid-area: A;
+			@extend %font-family-aromo;
+			&__slogan {
+				grid-area: B;
+				@extend %font-family-aromo_700;
+			}
+		}
+	}
 }
 
 .block__icon {
 	max-width: 4.5rem;
+}
+.icons-family {
+	grid-area: D;
 }

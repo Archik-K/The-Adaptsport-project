@@ -313,14 +313,14 @@ template {
   display: none;
 }
 
-.main-content__text-directions, .main-content__grid-row_2, .main-content__grid-row_1, .main-content__block-text__paragraph_one {
+.main-content__section-text__paragraph_purpose, .main-content__text-directions, .main-content__grid-row_2, .main-content__grid-row_1, .main-content__block-text__paragraph_one {
   font-family: "Arimo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
-.main-content__h1, .main-content__block-text__paragraph_two {
+.main-content__section-text__paragraph_purpose__slogan, .main-content__h1, .main-content__block-text__paragraph_two {
   font-family: "Arimo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -418,7 +418,6 @@ template {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas: "introduction introduction introduction introduction" "directions directions directions directions" "M    M    M  M";
-  height: 40rem;
   gap: 3rem;
   justify-items: center;
   align-items: center;
@@ -432,6 +431,7 @@ template {
 }
 .main-content__section_directions {
   grid-area: directions;
+  width: 100%;
 }
 .main-content__block_video {
   grid-area: video_main;
@@ -450,6 +450,7 @@ template {
   justify-items: center;
   grid-template-areas: "A    A    A " "B    f    C " "B    f    C";
   background-color: hsl(240, 90%, 96%);
+  width: 100%;
 }
 .main-content__h1 {
   grid-area: A;
@@ -470,6 +471,32 @@ template {
   margin: 1rem;
   width: 33rem;
 }
+.main-content__section-text {
+  display: grid;
+  grid-template-areas: "D A A " "D B B";
+  width: 753px;
+  margin: 2rem 0rem 2rem 30rem;
+  justify-content: center;
+  justify-items: center;
+}
+.main-content__section-text__paragraph_purpose {
+  margin: 3rem 1rem 0rem 1rem;
+  grid-area: A;
+}
+.main-content__section-text__paragraph_purpose__slogan {
+  grid-area: B;
+}
+
 .block__icon {
   max-width: 4.5rem;
+}
+
+.icons-family {
+  grid-area: D;
+}
+
+.footer-content {
+  display: grid;
+  background: linear-gradient(to right, hsla(207, 100%, 91%, 0.788), hsla(184, 100%, 84%, 0.856), hsla(184, 87%, 79%, 0.808), hsla(193, 100%, 82%, 0.829), hsla(202, 100%, 87%, 0.774), hsla(216, 100%, 85%, 0.795), hsla(230, 100%, 84%, 0.856), hsla(227, 100%, 86%, 0.822), hsla(231, 97%, 87%, 0.801));
+  height: 15rem;
 }/*# sourceMappingURL=style.css.map */
