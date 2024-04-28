@@ -327,7 +327,7 @@ template {
   font-style: normal;
 }
 
-.menu__link, .header__requisites, .header__phone, .header__email, .header__title {
+.footer__row-1, .footer__oki, .footer__email, .footer__phone, .footer__vk, .menu__link, .header__requisites, .header__phone, .header__email, .header__title {
   font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -335,7 +335,7 @@ template {
 }
 
 .header__requisites, .header__social, .header__contact_phone, .header__contact_email {
-  margin: 0.5rem 6rem 0.1rem 0rem;
+  margin: 0.5rem 8rem 0.1rem 0rem;
 }
 
 /*  тут пишем то что мы используем часто
@@ -349,6 +349,7 @@ template {
   align-content: stretch;
   justify-items: end;
   align-items: center;
+  width: 100%;
 }
 .header__logo__img {
   width: 15rem;
@@ -357,7 +358,7 @@ template {
   grid-area: A;
 }
 .header__title {
-  margin: 2rem 2rem 2rem 2rem;
+  margin: 2rem 1rem 2rem 1rem;
   width: 35rem;
   text-align: center;
   color: #007ab6;
@@ -399,38 +400,51 @@ template {
 }
 .menu__item {
   list-style: none;
+  display: inline-block;
 }
 .menu__link {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  position: relative;
   color: #006292;
   text-decoration: none;
   text-shadow: 1px 1px 2px rgb(143, 143, 143);
 }
+.menu a:hover::before {
+  transform: scale3d(1, 1, 1);
+}
+.menu a::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  background: #006292;
+  transition: 0.5s transform ease;
+  transform: scale3d(0, 1, 1);
+  transform-origin: 0 50%;
+}
 
-.grid-container {
+#grid-container {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
   min-height: 100%;
   width: 100%;
 }
 
 .main-content {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-areas: "introduction introduction introduction introduction" "directions directions directions directions" "M    M    M  M";
-  gap: 3rem;
-  justify-items: center;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 .main-content__section_introduction {
-  grid-area: introduction;
   display: grid;
   justify-items: center;
   margin: 2rem;
   grid-template-areas: "video_main text_main";
 }
 .main-content__section_directions {
-  grid-area: directions;
   width: 100%;
 }
 .main-content__block_video {
@@ -473,17 +487,18 @@ template {
 }
 .main-content__section-text {
   display: grid;
+  width: 50%;
   grid-template-areas: "D A A " "D B B";
-  width: 753px;
-  margin: 2rem 0rem 2rem 30rem;
   justify-content: center;
   justify-items: center;
+  padding: 2rem 15rem 3rem 27rem;
 }
 .main-content__section-text__paragraph_purpose {
   margin: 3rem 1rem 0rem 1rem;
   grid-area: A;
 }
 .main-content__section-text__paragraph_purpose__slogan {
+  font-size: 1.5rem;
   grid-area: B;
 }
 
@@ -495,8 +510,114 @@ template {
   grid-area: D;
 }
 
-.footer-content {
+.wave {
+  --c: #007ab6;
+  --t: -23px;
+  --h: 27px;
+  --w: 315px;
+  --p: 10.7px;
+  background: radial-gradient(farthest-side at 34% calc(124% + var(--p)), transparent 51%, var(--c) 54% calc(65% + var(--t)), transparent calc(67% + var(--t))), radial-gradient(farthest-side at 48% calc(-72% - var(--p)), transparent 70%, var(--c) 72% calc(84% + var(--t)), transparent calc(88% + var(--t)));
+  background-size: var(--w) var(--h);
+  background-position: calc(var(--w) / 2) calc(var(--h) / 2), -44px calc(var(--h) / 2);
+  margin: 28px 0;
+  display: inline-block;
+  width: 100%;
+  height: 26px;
+}
+
+.img_p {
+  width: 361px;
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas: "A A" "N D";
+  gap: 0.5rem;
+  background: url(/assets/icons/1613326244_13-p-krasivii-sinii-fon-gradient-20.jpg);
+  /* border-radius: 78px; */
+  margin: 1rem;
+  align-items: baseline;
+}
+
+.img-1 {
+  width: 100%;
+  grid-area: N;
+}
+
+.img-2 {
+  width: 100%;
+  grid-area: A;
+}
+
+.img-3 {
+  width: 100%;
+  grid-area: D;
+}
+
+.slick-dots {
+  display: flex !important;
+}
+
+.footer-content {
+  display: flex;
+  color: white;
+  height: 12rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(to right, hsla(207, 100%, 91%, 0.788), hsla(184, 100%, 84%, 0.856), hsla(184, 87%, 79%, 0.808), hsla(193, 100%, 82%, 0.829), hsla(202, 100%, 87%, 0.774), hsla(216, 100%, 85%, 0.795), hsla(230, 100%, 84%, 0.856), hsla(227, 100%, 86%, 0.822), hsla(231, 97%, 87%, 0.801));
-  height: 15rem;
+}
+.footer-content__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 65%;
+  height: 6rem;
+}
+
+.footer__row-1, .footer__oki, .footer__email, .footer__phone, .footer__vk {
+  color: #007ab6;
+}
+.footer__contact_email_vk {
+  display: flex;
+  height: 6rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: center;
+}
+.footer__contact_phone-oki {
+  display: flex;
+  height: 6rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0rem 0rem 0rem 2rem;
+}
+.footer__email {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 13rem;
+}
+.footer__vk {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 11.5rem;
+}
+.footer__phone {
+  display: flex;
+  background-color: #fafcfe;
+  border-radius: 50px;
+  height: 2rem;
+  width: 14rem;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer__oki {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 13rem;
 }/*# sourceMappingURL=style.css.map */

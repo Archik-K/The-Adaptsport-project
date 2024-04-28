@@ -5,10 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" href="./assets/icons/icon.png" type="image/png" />
 		<link rel="stylesheet" href="./assets/style/style.css" />
+		<link rel="stylesheet" href="./assets/style/main.css" />
+		<link rel="stylesheet" href="slick.css" />
 		<title>Адаптспорт - Главная</title>
 	</head>
 	<body>
-		<div class="grid-container">
+		<div id="grid-container">
 			<header class="header">
 				<a href="./index.html" class="header__logo">
 					<img
@@ -34,20 +36,20 @@
 				<div class="header__social">
 					<a href="https://vk.com/adaptsport">
 						<img
-							src="./assets/icons/vk.png"
+							src="./assets/icons/vk.svg"
 							alt="VK"
 							class="header-social__icon"
 						/>
 					</a>
 					<a href="https://ok.ru/group/55794821890054">
 						<img
-							src="./assets/icons/ok.png"
+							src="./assets/icons/oki.svg"
 							alt="ОК"
 							class="header-social__icon"
 						/>
 					</a>
 				</div>
-				<p class="header__requisites"><a href="images/xxx.jpg">Реквезиты</a></p>
+				<a class="header__requisites" href="images/xxx.jpg">Реквезиты</a>
 				<nav class="menu">
 					<ul class="menu__list" id="menu">
 						<li class="menu__item">
@@ -196,9 +198,207 @@
 						</p>
 					</section>
 				</section>
+				<div class="wave"></div>
+				<h2 class="classes">Занятия</h2>
+				<div class="classes__wrapper slick-wrapper">
+					<div class="classes__slide slick-slide active">
+						<div class="img_p">
+							<img
+								src="/assets/icons/kaw7wbfe-sg6C7E9E51-760C-482E-A43E-6933BF3FB090.jpg"
+								class="img-1"
+							/>
+							<img src="/assets/icons/4dIm4h5BSFk.jpg" class="img-2" />
+							<img src="/assets/icons/tuKXYGcz88A.jpg" class="img-3" />
+						</div>
+						<div class="div1">
+							<h2>Адаптивное плавание</h2>
+
+							<p>
+								Плавание в бассейнах "Три кита" для начинающих и детей ростом до
+								130см
+							</p>
+							<a href="#">Читать подробнее</a>
+						</div>
+					</div>
+					<div class="classes__slide slick-slide">
+						<img src="/assets/icons/футбол.png" />
+						<h2>Мини-футбол</h2>
+						<p>
+							младшая группа 6+ <br />
+							средняя возрастная, категория (смешанная команда 10+)
+							<br />
+							средняя возрастная команда ребят с РАС и лиц с интеллектуальными
+							нарушениями (12+) <br />
+							старшая возрастная категория (12+) для людей с синдромом Дауна
+						</p>
+						<a href="#">Читать подробнее</a>
+					</div>
+					<div class="classes__slide slick-slide">
+						<img src="./гребля.png" />
+						<h2>Гребля</h2>
+						<p>
+							Тренерский состав имеет высшее образование, являются членами
+							Воронежской Областной Общественной Организации "Федерация гребли
+							на байдарках и каноэ". Вицечемпионы Европы 2019г.
+						</p>
+						<a href="#">Читать подробнее</a>
+					</div>
+					<div class="classes__slide slick-slide">
+						<img src="./скалолазание.png" />
+						<h2>Адаптивное скалолазание</h2>
+						<p></p>
+						<a href="#">Читать подробнее</a>
+					</div>
+					<div class="classes__slide slick-slide">
+						<img src="./Модельное агентство (2).png" />
+						<h2>Модельное агентство</h2>
+						<p>Sunshiny MODELS</p>
+						<a href="#">Читать подробнее</a>
+					</div>
+					<div class="classes__slide slick-slide">
+						<img src="./Оздоровительное ушу.png" />
+						<h2>Оздоровительное ушу</h2>
+						<p></p>
+						<a href="#">Читать подробнее</a>
+					</div>
+					<div class="classes__slide slick-slide">
+						<img src="/" />
+						<h2>Лыжи, ролики и ОФП</h2>
+						<p>Беговые лыжи, скоростные ролики (летний период) и ОФП</p>
+						<a href="#">Читать подробнее</a>
+					</div>
+					<div class="classes__slide slick-slide">
+						<img src="./Баскетбол.png" />
+						<h2>Баскетбол</h2>
+						<p></p>
+						<a href="#">Читать подробнее</a>
+					</div>
+					<div class="classes__slide slick-slide">
+						<img src="/Настольный теннис.png" />
+						<h2>Настольный теннис</h2>
+						<p></p>
+						<a href="#">Читать подробнее</a>
+					</div>
+					<div class="classes__slide slick-slide">
+						<img src="/Арт-студия.png" />
+						<h2>Арт-студия</h2>
+						<p>Творческие занятия и мастер-классы в арт-студии "Чебурашка" </p>
+						<a href="#">Читать подробнее</a>
+					</div>
+					<div class="classes__slide slick-slide">
+						<img src="./Солнечные волонтёры.png" />
+						<h2>Солнечные волонтёры</h2>
+						<p>Волонтёрское движение «Солнечные волонтёры»</p>
+						<a href="#">Читать подробнее</a>
+					</div>
+					<button
+						type="button"
+						id="slider-prev"
+						class="slider__btn slider__btn_prev"
+					></button>
+					<button
+						type="button"
+						id="slider-next"
+						class="slider__btn slider__btn_next"
+					></button>
+				</div>
+				<div class="wave"></div>
+				<h2 class="projects">Проекты</h2>
+				<div class="projects__wrapper slick-wrapper">
+					<div class="projects__slide slick-slide">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+						corrupti quis, atque ratione sunt illo! Aut voluptatem ullam
+						similique rem quibusdam obcaecati, doloremque, facilis, impedit
+						possimus eveniet expedita a quaerat.
+					</div>
+					<div class="projects__slide slick-slide">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+						corrupti quis, atque ratione sunt illo! Aut voluptatem ullam
+						similique rem quibusdam obcaecati, doloremque, facilis, impedit
+						possimus eveniet expedita a quaerat.
+					</div>
+					<div class="projects__slide slick-slide">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+						corrupti quis, atque ratione sunt illo! Aut voluptatem ullam
+						similique rem quibusdam obcaecati, doloremque, facilis, impedit
+						possimus eveniet expedita a quaerat.
+					</div>
+					<button
+						type="button"
+						id="slider-prev"
+						class="slider__btn slider__btn_prev"
+					></button>
+					<button
+						type="button"
+						id="slider-next"
+						class="slider__btn slider__btn_next"
+					></button>
+				</div>
+				<div class="wave"></div>
+				<h2 class="projects">Новости</h2>
+				<div class="news__wrapper slick-wrapper">
+					<div class="news__slide slick-slide slide_1"></div>
+					<div class="news__slide slick-slide">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. In ducimus
+						doloribus voluptatum excepturi, cum, tempore at accusantium autem
+						aut quaerat quas amet? Debitis sequi eligendi architecto
+						perspiciatis unde explicabo beatae.
+					</div>
+					<div class="news__slide slick-slide">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. In ducimus
+						doloribus voluptatum excepturi, cum, tempore at accusantium autem
+						aut quaerat quas amet? Debitis sequi eligendi architecto
+						perspiciatis unde explicabo beatae.
+					</div>
+					<button
+						type="button"
+						id="slider-prev"
+						class="slider__btn slider__btn_prev"
+					></button>
+					<button
+						type="button"
+						id="slider-next"
+						class="slider__btn slider__btn_next"
+					></button>
+				</div>
+				<div class="wave"></div>
 			</main>
+			<footer class="footer-content">
+				<div class="footer-content__wrapper">
+					<div class="footer-content__documents_and_details">
+						<a class="footer__documents footer__row-1" href="#"
+							>Документы и реквизиты
+						</a>
+					</div>
+					<div class="footer-content__report">
+						<a class="footer__report footer__row-1" href="#">Отчёты</a>
+					</div>
+				</div>
+				<div class="footer__contact_email_vk">
+					<a href="mailto:info@adaptsport.org" class="footer__email"
+						><img
+							src="./assets/icons/email.svg"
+							alt="icon-email"
+						/>info@adaptsport.org</a
+					>
+					<a href="https://vk.com/adaptsport" class="footer__vk"
+						><img src="./assets/icons/vk.svg" alt="icon-vk" />Мы во ВКонтакте</a
+					>
+				</div>
+				<div class="footer__contact_phone-oki">
+					<a href="tel:+79529535500" class="footer__phone"
+						>+7 (952) 953-55-00</a
+					>
+					<a href="https://ok.ru/group/55794821890054" class="footer__oki"
+						><img src="./assets/icons/oki.svg" />Мы в одноклассниках</a
+					>
+				</div>
+			</footer>
 		</div>
-		<footer class="footer-content"></footer>
+
 		<script src="./assets/script/script.js"></script>
+		<script src="jquery-1.11.0.min.js"></script>
+		<script src="slick.min.js"></script>
+		<script src="main.js"></script>
 	</body>
 </html>

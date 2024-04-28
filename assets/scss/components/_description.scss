@@ -1,30 +1,21 @@
-.grid-container {
+#grid-container {
 	display: grid;
-	grid-template-rows: auto 1fr auto;
+	grid-template-rows: auto;
+	grid-template-columns: auto;
 	min-height: 100%;
 	width: 100%;
 }
 
 .main-content {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(3, 1fr);
-	grid-template-areas:
-		"introduction introduction introduction introduction"
-		"directions directions directions directions"
-		"M    M    M  M";
-	gap: 3rem;
-	justify-items: center;
-	align-items: center;
+	display: flex;
+	flex-direction: column;
 	&__section_introduction {
-		grid-area: introduction;
 		display: grid;
 		justify-items: center;
 		margin: 2rem;
 		grid-template-areas: "video_main text_main";
 	}
 	&__section_directions {
-		grid-area: directions;
 		width: 100%;
 	}
 	&__block_video {
@@ -90,18 +81,19 @@
 	}
 	&__section-text {
 		display: grid;
+		width: 50%;
 		grid-template-areas:
 			"D A A "
 			"D B B";
-		width: 753px;
-		margin: 2rem 0rem 2rem 30rem;
 		justify-content: center;
 		justify-items: center;
+		padding: 2rem 15rem 3rem 27rem;
 		&__paragraph_purpose {
 			margin: 3rem 1rem 0rem 1rem;
 			grid-area: A;
 			@extend %font-family-aromo;
 			&__slogan {
+				font-size: 1.5rem;
 				grid-area: B;
 				@extend %font-family-aromo_700;
 			}
@@ -114,4 +106,63 @@
 }
 .icons-family {
 	grid-area: D;
+}
+.wave {
+	--c: #007ab6;
+	--t: -23px;
+	--h: 27px;
+	--w: 315px;
+	--p: 10.7px;
+	background: radial-gradient(
+			farthest-side at 34% calc(124% + var(--p)),
+			transparent 51%,
+			var(--c) 54% calc(65% + var(--t)),
+			transparent calc(67% + var(--t))
+		),
+		radial-gradient(
+			farthest-side at 48% calc(-72% - var(--p)),
+			transparent 70%,
+			var(--c) 72% calc(84% + var(--t)),
+			transparent calc(88% + var(--t))
+		);
+	background-size: var(--w) var(--h);
+	background-position: calc(var(--w) / 2) calc(var(--h) / 2),
+		-44px calc(var(--h) / 2);
+	margin: 28px 0;
+	display: inline-block;
+	width: 100%;
+	height: 26px;
+}
+
+.img_p {
+	width: 361px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(1, 1fr);
+	grid-template-areas:
+		"A A"
+		"N D";
+	gap: 0.5rem;
+	background: url(/assets/icons/1613326244_13-p-krasivii-sinii-fon-gradient-20.jpg);
+	/* border-radius: 78px; */
+	margin: 1rem;
+	align-items: baseline;
+}
+
+.img-1 {
+	width: 100%;
+	grid-area: N;
+}
+
+.img-2 {
+	width: 100%;
+	grid-area: A;
+}
+.img-3 {
+	width: 100%;
+	grid-area: D;
+}
+
+.slick-dots {
+	display: flex !important;
 }

@@ -12,6 +12,7 @@
 	align-content: stretch;
 	justify-items: end;
 	align-items: center;
+	width: 100%;
 	&__logo__img {
 		width: 15rem;
 	}
@@ -19,7 +20,7 @@
 		grid-area: A;
 	}
 	&__title {
-		margin: 2rem 2rem 2rem 2rem;
+		margin: 2rem 1rem 2rem 1rem;
 		width: 35rem;
 		text-align: center;
 		color: $accent-color;
@@ -68,11 +69,30 @@
 	}
 	&__item {
 		list-style: none;
+		display: inline-block;
 	}
 	&__link {
+		font-size: 1.1rem;
+		text-transform: uppercase;
+		position: relative;
 		color: $menu-color;
 		text-decoration: none;
 		@extend %rubik-family-text;
 		text-shadow: 1px 1px 2px rgb(143, 143, 143);
+	}
+	a:hover::before {
+		transform: scale3d(1, 1, 1);
+	}
+	a::before {
+		content: "";
+		width: 100%;
+		height: 3px;
+		position: absolute;
+		left: 0;
+		bottom: -2px;
+		background: $menu-color;
+		transition: 0.5s transform ease;
+		transform: scale3d(0, 1, 1);
+		transform-origin: 0 50%;
 	}
 }
