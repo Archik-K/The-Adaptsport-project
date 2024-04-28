@@ -77,3 +77,7 @@
 .classes {
 	text-align: center;
 }
+
+li[role="presentation"] {
+	display: none;
+}
