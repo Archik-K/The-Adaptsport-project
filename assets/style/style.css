@@ -313,14 +313,14 @@ template {
   display: none;
 }
 
-.main-content__section-text__paragraph_purpose, .main-content__text-directions, .main-content__grid-row_2, .main-content__grid-row_1, .main-content__block-text__paragraph_one {
+.classes__wrapper__paragraph, .classes__wrapper__link-for-details, .main-content__section-text__paragraph_purpose, .main-content__text-directions, .main-content__grid-row_2, .main-content__grid-row_1, .main-content__block-text__paragraph_one {
   font-family: "Arimo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
-.main-content__section-text__paragraph_purpose__slogan, .main-content__h1, .main-content__block-text__paragraph_two {
+.classes, .classes__wrapper__h2, .main-content__section-text__paragraph_purpose__slogan, .main-content__h1, .main-content__block-text__paragraph_two {
   font-family: "Arimo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -387,6 +387,7 @@ template {
 
 .menu {
   width: 100%;
+  height: 3rem;
   display: flex;
   grid-area: W;
   background-color: #f9fcff;
@@ -404,11 +405,10 @@ template {
 }
 .menu__link {
   font-size: 1.1rem;
-  text-transform: uppercase;
   position: relative;
   color: #006292;
   text-decoration: none;
-  text-shadow: 1px 1px 2px rgb(143, 143, 143);
+  /* 	text-shadow: 1px 1px 2px rgb(143, 143, 143); */
 }
 .menu a:hover::before {
   transform: scale3d(1, 1, 1);
@@ -441,8 +441,10 @@ template {
 .main-content__section_introduction {
   display: grid;
   justify-items: center;
-  margin: 2rem;
+  justify-content: center;
+  margin: 5rem;
   grid-template-areas: "video_main text_main";
+  align-items: center;
 }
 .main-content__section_directions {
   width: 100%;
@@ -452,11 +454,15 @@ template {
 }
 .main-content__block-text {
   width: 40rem;
+  height: 13rem;
   padding: 2rem;
   margin: 2rem;
   grid-area: text_main;
   background: linear-gradient(45deg, hsla(184, 78%, 93%, 0.788), hsl(212, 92%, 90%), hsl(237, 88%, 91%));
   border-radius: 62px;
+}
+.main-content__block-text__paragraph_two {
+  padding: 3rem 0rem 0rem 0rem;
 }
 .main-content__block-directions_organization {
   display: grid;
@@ -465,6 +471,7 @@ template {
   grid-template-areas: "A    A    A " "B    f    C " "B    f    C";
   background-color: hsl(240, 90%, 96%);
   width: 100%;
+  gap: 2rem;
 }
 .main-content__h1 {
   grid-area: A;
@@ -482,7 +489,7 @@ template {
   /* Отступы между колонками */
   -moz-column-gap: 20px;
        column-gap: 20px;
-  margin: 1rem;
+  margin: 1.3rem;
   width: 33rem;
 }
 .main-content__section-text {
@@ -491,7 +498,7 @@ template {
   grid-template-areas: "D A A " "D B B";
   justify-content: center;
   justify-items: center;
-  padding: 2rem 15rem 3rem 27rem;
+  padding: 4rem 15rem 4rem 23rem;
 }
 .main-content__section-text__paragraph_purpose {
   margin: 3rem 1rem 0rem 1rem;
@@ -525,7 +532,7 @@ template {
   height: 26px;
 }
 
-.img_p {
+.classes__wrapper__container-img {
   width: 361px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -533,28 +540,66 @@ template {
   grid-template-areas: "A A" "N D";
   gap: 0.5rem;
   background: url(/assets/icons/1613326244_13-p-krasivii-sinii-fon-gradient-20.jpg);
-  /* border-radius: 78px; */
+  border-radius: 7px;
   margin: 1rem;
   align-items: baseline;
 }
-
-.img-1 {
-  width: 100%;
-  grid-area: N;
+.classes__wrapper__container-img img {
+  border-radius: 9px;
 }
-
-.img-2 {
+.classes__wrapper__img-swimming1, .classes__wrapper__img-football1, .classes__wrapper__img-rowing1, .classes__wrapper__img-rock-climbing1, .classes__wrapper__img-modeling-agency1, .classes__wrapper__img-wushu1, .classes__wrapper__img-skis-roller-skates-OFP1, .classes__wrapper__img-powerlifting-OFP1, .classes__wrapper__img-basketball1, .classes__wrapper__img-table-tennis1, .classes__wrapper__img-art-studio1, .classes__wrapper__img-solar-volunteers1 {
   width: 100%;
   grid-area: A;
 }
-
-.img-3 {
+.classes__wrapper__img-swimming2, .classes__wrapper__img-football2, .classes__wrapper__img-rowing2, .classes__wrapper__img-rock-climbing2, .classes__wrapper__img-modeling-agency2, .classes__wrapper__img-wushu2, .classes__wrapper__img-skis-roller-skates-OFP2, .classes__wrapper__img-powerlifting-OFP2, .classes__wrapper__img-basketball2, .classes__wrapper__img-table-tennis2, .classes__wrapper__img-art-studio2, .classes__wrapper__img-solar-volunteers2 {
+  width: 100%;
+  grid-area: N;
+}
+.classes__wrapper__img-swimming3, .classes__wrapper__img-football3, .classes__wrapper__img-rowing3, .classes__wrapper__img-rock-climbing3, .classes__wrapper__img-modeling-agency3, .classes__wrapper__img-wushu3, .classes__wrapper__img-skis-roller-skates-OFP3, .classes__wrapper__img-powerlifting-OFP3, .classes__wrapper__img-basketball3, .classes__wrapper__img-table-tennis3, .classes__wrapper__img-art-studio3, .classes__wrapper__img-solar-volunteers3 {
   width: 100%;
   grid-area: D;
 }
-
+.classes__wrapper__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 16rem;
+  justify-content: space-between;
+}
+.classes__wrapper__link-for-details {
+  display: flex;
+  background-color: #0007ab;
+  color: #ffffff;
+  border-radius: 50px;
+  height: 2rem;
+  width: 14rem;
+  justify-content: space-around;
+  align-items: center;
+}
+.classes__wrapper__paragraph {
+  width: 23rem;
+}
 .slick-dots {
   display: flex !important;
+}
+
+.projects__slide {
+  background: linear-gradient(91deg, hsla(191, 55%, 75%, 0.41), hsla(201, 74%, 91%, 0.58), hsla(235, 73%, 90%, 0.68), hsla(231, 77%, 90%, 0.67), hsla(210, 69%, 90%, 0.68), hsla(191, 55%, 85%, 0.69));
+  display: flex;
+  width: 43rem !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  border-radius: 62px;
+  margin: 2rem 2rem 2rem 2rem;
+}
+.projects__wrapper__img-dari-food {
+  width: 45%;
+}
+
+.classes {
+  text-align: center;
+  margin: 40px auto;
+  font-size: 2rem;
 }
 
 .footer-content {
@@ -564,7 +609,7 @@ template {
   width: 100%;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to right, hsla(207, 100%, 91%, 0.788), hsla(184, 100%, 84%, 0.856), hsla(184, 87%, 79%, 0.808), hsla(193, 100%, 82%, 0.829), hsla(202, 100%, 87%, 0.774), hsla(216, 100%, 85%, 0.795), hsla(230, 100%, 84%, 0.856), hsla(227, 100%, 86%, 0.822), hsla(231, 97%, 87%, 0.801));
+  background: linear-gradient(to right, hsla(207, 100%, 91%, 0.753), hsla(184, 100%, 84%, 0.781), hsla(184, 87%, 79%, 0.712), hsla(193, 100%, 82%, 0.726), hsla(202, 100%, 87%, 0.719), hsla(216, 100%, 85%, 0.699), hsla(230, 100%, 84%, 0.733), hsla(227, 100%, 86%, 0.664), hsla(232, 97%, 87%, 0.671));
 }
 .footer-content__wrapper {
   display: flex;

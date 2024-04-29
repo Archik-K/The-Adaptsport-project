@@ -12,8 +12,10 @@
 	&__section_introduction {
 		display: grid;
 		justify-items: center;
-		margin: 2rem;
+		justify-content: center;
+		margin: 5rem;
 		grid-template-areas: "video_main text_main";
+		align-items: center;
 	}
 	&__section_directions {
 		width: 100%;
@@ -23,6 +25,7 @@
 	}
 	&__block-text {
 		width: 40rem;
+		height: 13rem;
 		padding: 2rem;
 		margin: 2rem;
 		grid-area: text_main;
@@ -37,6 +40,7 @@
 			@extend %font-family-aromo;
 		}
 		&__paragraph_two {
+			padding: 3rem 0rem 0rem 0rem;
 			@extend %font-family-aromo_700;
 		}
 	}
@@ -50,6 +54,7 @@
 			"B    f    C";
 		background-color: hsl(240, 90%, 96%);
 		width: 100%;
+		gap: 2rem;
 	}
 	&__h1 {
 		grid-area: A;
@@ -73,7 +78,7 @@
 		align-items: center;
 		/* Отступы между колонками */
 		column-gap: 20px;
-		margin: 1rem;
+		margin: 1.3rem;
 		width: 33rem;
 	}
 	&__text-directions {
@@ -87,7 +92,7 @@
 			"D B B";
 		justify-content: center;
 		justify-items: center;
-		padding: 2rem 15rem 3rem 27rem;
+		padding: 4rem 15rem 4rem 23rem;
 		&__paragraph_purpose {
 			margin: 3rem 1rem 0rem 1rem;
 			grid-area: A;
@@ -134,35 +139,129 @@
 	height: 26px;
 }
 
-.img_p {
-	width: 361px;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(1, 1fr);
-	grid-template-areas:
-		"A A"
-		"N D";
-	gap: 0.5rem;
-	background: url(/assets/icons/1613326244_13-p-krasivii-sinii-fon-gradient-20.jpg);
-	/* border-radius: 78px; */
-	margin: 1rem;
-	align-items: baseline;
-}
+.classes__wrapper {
+	&__container-img {
+		width: 361px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(1, 1fr);
+		grid-template-areas:
+			"A A"
+			"N D";
+		gap: 0.5rem;
+		background: url(/assets/icons/1613326244_13-p-krasivii-sinii-fon-gradient-20.jpg);
+		border-radius: 7px;
+		margin: 1rem;
+		align-items: baseline;
+	}
+	&__container-img img {
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 9px;
+	}
+	&__img-swimming1,
+	&__img-football1,
+	&__img-rowing1,
+	&__img-rock-climbing1,
+	&__img-modeling-agency1,
+	&__img-wushu1,
+	&__img-skis-roller-skates-OFP1,
+	&__img-powerlifting-OFP1,
+	&__img-basketball1,
+	&__img-table-tennis1,
+	&__img-art-studio1,
+	&__img-solar-volunteers1 {
+		width: 100%;
+		grid-area: A;
+	}
+	&__img-swimming2,
+	&__img-football2,
+	&__img-rowing2,
+	&__img-rock-climbing2,
+	&__img-modeling-agency2,
+	&__img-wushu2,
+	&__img-skis-roller-skates-OFP2,
+	&__img-powerlifting-OFP2,
+	&__img-basketball2,
+	&__img-table-tennis2,
+	&__img-art-studio2,
+	&__img-solar-volunteers2 {
+		width: 100%;
+		grid-area: N;
+	}
 
-.img-1 {
-	width: 100%;
-	grid-area: N;
-}
-
-.img-2 {
-	width: 100%;
-	grid-area: A;
-}
-.img-3 {
-	width: 100%;
-	grid-area: D;
+	&__img-swimming3,
+	&__img-football3,
+	&__img-rowing3,
+	&__img-rock-climbing3,
+	&__img-modeling-agency3,
+	&__img-wushu3,
+	&__img-skis-roller-skates-OFP3,
+	&__img-powerlifting-OFP3,
+	&__img-basketball3,
+	&__img-table-tennis3,
+	&__img-art-studio3,
+	&__img-solar-volunteers3 {
+		width: 100%;
+		grid-area: D;
+	}
+	&__description {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 16rem;
+		justify-content: space-between;
+	}
+	&__link-for-details {
+		display: flex;
+		background-color: $link-color;
+		color: $text-link-color;
+		border-radius: 50px;
+		height: 2rem;
+		width: 14rem;
+		justify-content: space-around;
+		align-items: center;
+		@extend %font-family-aromo;
+	}
+	&__paragraph {
+		width: 23rem;
+		@extend %font-family-aromo;
+	}
+	&__h2 {
+		@extend %font-family-aromo_700;
+	}
 }
 
 .slick-dots {
 	display: flex !important;
+}
+
+.projects {
+	&__slide {
+		background: linear-gradient(
+			91deg,
+			hsl(191deg 55% 75% / 41%),
+			hsl(201deg 74% 91% / 58%),
+			hsl(235deg 73% 90% / 68%),
+			hsl(231deg 77% 90% / 67%),
+			hsl(210deg 69% 90% / 68%),
+			hsl(191deg 55% 85% / 69%)
+		);
+		display: flex;
+		width: 43rem !important;
+		flex-direction: row !important;
+		align-items: center !important;
+		border-radius: 62px;
+		margin: 2rem 2rem 2rem 2rem;
+	}
+	&__wrapper__img-dari-food {
+		width: 45%;
+	}
+}
+
+.classes {
+	text-align: center;
+	margin: 40px auto;
+	@extend %font-family-aromo_700;
+	font-size: 2rem;
 }
