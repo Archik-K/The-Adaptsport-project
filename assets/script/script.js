@@ -12,7 +12,3 @@ function makeLine(id, squiggleCount) {
 		lineEl.append(curve);
 	}
 }
-
-$(document).ready(function () {
-	makeLine("#line", 26);
-});

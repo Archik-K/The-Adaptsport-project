@@ -5,8 +5,8 @@
 
 .slick-wrapper {
 	position: relative;
-	max-width: 100rem;
-	width: 100%;
+	max-width: 1920px;
+	width: 90%;
 	margin: 30px auto;
 }
 .slick-list {
@@ -15,6 +15,7 @@
 .slick-track {
 	display: flex;
 	justify-content: flex-start;
+	overflow: hidden;
 }
 
 .slide_1 {
@@ -33,13 +34,13 @@
 }
 .slick-slide {
 	min-height: 343px;
+	max-width: 1240px;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	background: linear-gradient(91deg, rgba(156, 213, 226, 0.41), rgba(215, 237, 249, 0.58), rgba(211, 214, 248, 0.68), rgba(210, 216, 249, 0.67), rgba(212, 230, 247, 0.68), rgba(196, 230, 238, 0.69))
 }
 
-.slick-slide.active {
-}
 .slick-arrow {
 	position: absolute;
 	top: 50%;
@@ -65,7 +66,7 @@
 	border-radius: 62px;
 	margin: 2rem 2rem 2rem 2rem;
 }
-
+/* 
 .slide-colour-1 {
 	background: linear-gradient(
 		88deg,
@@ -81,7 +82,7 @@
 		hsl(212deg 91% 87% / 56%),
 		hsl(124, 80%, 96%)
 	);
-}
+} */
 
 li[role="presentation"] {
 	display: none;
@@ -90,4 +91,23 @@ li[role="presentation"] {
 .projects {
 	text-align: center;
 	margin: 40px auto;
+}
+.classes__slide {
+	background: linear-gradient(
+		88deg,
+		hsl(124deg 80% 96% / 85%),
+		hsl(212deg 91% 87% / 58%),
+		hsl(238deg 87% 88% / 52%)
+	);
+}
+.classes__slide:nth-child(2n) {
+	background: linear-gradient(
+		79deg,
+		hsl(238deg 87% 88% / 46%),
+		hsl(212deg 91% 87% / 56%),
+		hsl(124, 80%, 96%)
+		);
+}
+.news__slide {
+	background: #EDF4F4;
 }
