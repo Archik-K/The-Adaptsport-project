@@ -313,14 +313,14 @@ template {
   display: none;
 }
 
-.classes__wrapper__paragraph, .classes__wrapper__link-for-details, .main-content__section-text__paragraph_purpose, .main-content__text-directions, .main-content__grid-row_2, .main-content__grid-row_1, .main-content__block-text__paragraph_one {
+li, .projects__paragraph, .classes__wrapper__paragraph, .classes__wrapper__link-for-details, .main-content__section-text__paragraph_purpose, .main-content__text-directions, .main-content__grid-row_2, .main-content__grid-row_1, .main-content__block-text__paragraph_one {
   font-family: "Arimo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
-.classes, .classes__wrapper__h2, .main-content__section-text__paragraph_purpose__slogan, .main-content__h1, .main-content__block-text__paragraph_two {
+.classes, .projects__heading, .projects__projects__heading, .classes__wrapper__h2, .main-content__section-text__paragraph_purpose__slogan, .main-content__h1, .main-content__block-text__paragraph_two {
   font-family: "Arimo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -341,7 +341,7 @@ template {
 /*  тут пишем то что мы используем часто
  */
 .header {
-  background: url(/assets/icons/1612746203_34-p-fon-drim-art-goluboi-59.png);
+  background: url(/assets/icons/1612746203_34-p-fon-drim-art-goluboi-59.png) no-repeat top/cover;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(2, 2fr);
@@ -533,7 +533,7 @@ template {
 }
 
 .classes__wrapper__container-img {
-  width: 361px;
+  max-width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr);
@@ -563,7 +563,7 @@ template {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 16rem;
+  height: 15rem;
   justify-content: space-between;
 }
 .classes__wrapper__link-for-details {
@@ -584,7 +584,6 @@ template {
 }
 
 .projects__slide {
-  background: linear-gradient(91deg, hsla(191, 55%, 75%, 0.41), hsla(201, 74%, 91%, 0.58), hsla(235, 73%, 90%, 0.68), hsla(231, 77%, 90%, 0.67), hsla(210, 69%, 90%, 0.68), hsla(191, 55%, 85%, 0.69));
   display: flex;
   width: 43rem !important;
   flex-direction: row !important;
@@ -592,14 +591,35 @@ template {
   border-radius: 62px;
   margin: 2rem 2rem 2rem 2rem;
 }
-.projects__wrapper__img-dari-food {
-  width: 45%;
+.projects__wrapper__img-dari-food, .projects__wrapper__img-who-who-lives-in-the-teremochka, .projects__wrapper__img-adaptive-sports–equal-opportunities {
+  width: 40%;
 }
-
+.projects__content-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 19rem;
+  width: 23rem;
+  justify-content: space-between;
+}
+.projects__heading {
+  font-size: 1.5rem;
+}
 .classes {
   text-align: center;
   margin: 40px auto;
   font-size: 2rem;
+}
+
+.classes__slide__text-photos {
+  display: flex;
+  align-items: center;
+  height: 18rem;
+  width: 41rem;
+}
+
+li {
+  list-style-type: none;
 }
 
 .footer-content {
