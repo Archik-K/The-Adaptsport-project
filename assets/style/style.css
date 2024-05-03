@@ -313,14 +313,14 @@ template {
   display: none;
 }
 
-.news__link-for-details, .news__paragraph, li, .projects__paragraph, .classes__wrapper__paragraph, .classes__wrapper__link-for-details, .main-content__section-text__paragraph_purpose, .main-content__text-directions, .main-content__grid-row_2, .main-content__grid-row_1, .main-content__block-text__paragraph_one {
+.news__link-for-details, .news__paragraph, .projects__paragraph, .classes__wrapper__paragraph, .classes__wrapper__link-for-details, li, .main-content__section-text__paragraph_purpose, .main-content__text-directions, .main-content__grid-row_2, .main-content__grid-row_1, .main-content__block-text__paragraph_one {
   font-family: "Arimo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
-.classes, .projects__heading, .projects__projects__heading, .classes__wrapper__h2, .main-content__section-text__paragraph_purpose__slogan, .main-content__h1, .main-content__block-text__paragraph_two {
+.projects__heading, .projects__projects__heading, .classes__wrapper__h2, .classes, .main-content__section-text__paragraph_purpose__slogan, .main-content__h1, .main-content__block-text__paragraph_two {
   font-family: "Arimo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -532,6 +532,87 @@ template {
   height: 26px;
 }
 
+.slick-dots {
+  display: flex !important;
+}
+
+.classes {
+  text-align: center;
+  margin: 40px auto;
+  font-size: 2rem;
+}
+
+.classes__slide__text-photos {
+  display: flex;
+  align-items: center;
+  height: 18rem;
+  width: 41rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.slick-wrapper {
+  position: relative;
+  max-width: 90%;
+  width: 100rem;
+  margin: 30px auto;
+  min-width: 50%;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.slide_1 {
+  background: linear-gradient(45deg, hsla(184, 78%, 93%, 0.788), hsl(212, 92%, 90%), hsl(237, 88%, 91%));
+}
+
+.slick-prev {
+  left: -78px;
+  background: url("/assets/icons/prev-btn.svg") no-repeat left;
+  background-size: 66px; /* Устанавливаем размер изображения */
+}
+
+.slick-slide {
+  min-height: 343px;
+  max-width: 1240px;
+  justify-content: center;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 98px;
+  height: 98px;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.slick-next {
+  right: -78px;
+  background: url("/assets/icons/next-btn.svg") no-repeat right;
+  background-size: 66px; /* Устанавливаем размер изображения */
+}
+
+li[role=presentation] {
+  display: none;
+}
+
 .classes__wrapper__container-img {
   max-width: 100%;
   display: grid;
@@ -579,10 +660,27 @@ template {
 .classes__wrapper__paragraph {
   width: 23rem;
 }
-.slick-dots {
-  display: flex !important;
+.classes__slide {
+  background: linear-gradient(88deg, hsla(124, 80%, 96%, 0.85), hsla(212, 91%, 87%, 0.58), hsla(238, 87%, 88%, 0.52));
 }
 
+.classes__slide:nth-child(2n) {
+  background: linear-gradient(79deg, hsla(238, 87%, 88%, 0.46), hsla(212, 91%, 87%, 0.56), hsl(124, 80%, 96%));
+}
+
+.classes__slide {
+  display: flex;
+  width: 45rem !important;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 62px;
+  margin: 2rem 2rem 2rem 2rem;
+}
+
+.projects {
+  text-align: center;
+  margin: 40px auto;
+}
 .projects__slide {
   display: flex;
   width: 43rem !important;
@@ -606,26 +704,20 @@ template {
 .projects__heading {
   font-size: 1.5rem;
 }
-.classes {
-  text-align: center;
-  margin: 40px auto;
-  font-size: 2rem;
-}
-
-.classes__slide__text-photos {
-  display: flex;
-  align-items: center;
-  height: 18rem;
-  width: 41rem;
-}
-
-li {
-  list-style-type: none;
-}
-
 .news {
   text-align: center;
   margin: 40px auto;
+}
+.news__slide {
+  background: #edf4f4;
+  display: flex;
+  width: 28rem !important;
+  height: 32rem;
+  flex-direction: column !important;
+  align-items: center;
+  border-radius: 62px;
+  margin: 2rem 2rem 2rem 2rem;
+  justify-content: space-evenly;
 }
 .news__container-with-photo-text-news-link {
   display: flex;
@@ -647,100 +739,6 @@ li {
   width: 15rem;
   justify-content: space-around;
   align-items: center;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-}
-
-.slick-wrapper {
-  position: relative;
-  max-width: 90%;
-  width: 100rem;
-  margin: 30px auto;
-  min-width: 50%;
-}
-
-.slick-list {
-  overflow: hidden;
-}
-
-.slick-track {
-  display: flex;
-  justify-content: space-around;
-  overflow: hidden;
-}
-
-.slide_1 {
-  background: linear-gradient(45deg, hsla(184, 78%, 93%, 0.788), hsl(212, 92%, 90%), hsl(237, 88%, 91%));
-}
-
-.slick-prev {
-  left: -78px;
-  background: url("/prev-btn.svg") no-repeat left;
-  background-size: 66px; /* Устанавливаем размер изображения */
-}
-
-.slick-slide {
-  min-height: 343px;
-  max-width: 1240px;
-  justify-content: center;
-}
-
-.slick-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 98px;
-  height: 98px;
-  border: none;
-  cursor: pointer;
-  z-index: 100;
-}
-
-.slick-next {
-  right: -78px;
-  background: url("/next-btn.svg") no-repeat right;
-  background-size: 66px; /* Устанавливаем размер изображения */
-}
-
-.classes__slide {
-  display: flex;
-  width: 45rem !important;
-  flex-direction: row;
-  align-items: center;
-  border-radius: 62px;
-  margin: 2rem 2rem 2rem 2rem;
-}
-
-li[role=presentation] {
-  display: none;
-}
-
-.projects {
-  text-align: center;
-  margin: 40px auto;
-}
-
-.classes__slide {
-  background: linear-gradient(88deg, hsla(124, 80%, 96%, 0.85), hsla(212, 91%, 87%, 0.58), hsla(238, 87%, 88%, 0.52));
-}
-
-.classes__slide:nth-child(2n) {
-  background: linear-gradient(79deg, hsla(238, 87%, 88%, 0.46), hsla(212, 91%, 87%, 0.56), hsl(124, 80%, 96%));
-}
-
-.news__slide {
-  background: #edf4f4;
-  display: flex;
-  width: 28rem !important;
-  height: 32rem;
-  flex-direction: column !important;
-  align-items: center;
-  border-radius: 62px;
-  margin: 2rem 2rem 2rem 2rem;
-  justify-content: space-evenly;
 }
 
 .footer-content {

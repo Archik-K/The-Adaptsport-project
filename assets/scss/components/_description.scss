@@ -197,7 +197,7 @@ li {
 
 .slick-prev {
 	left: -78px;
-	background: url("/prev-btn.svg") no-repeat left;
+	background: url("/assets/icons/prev-btn.svg") no-repeat left;
 	background-size: 66px; /* Устанавливаем размер изображения */
 }
 .slick-slide {
@@ -218,11 +218,10 @@ li {
 }
 .slick-next {
 	right: -78px;
-	background: url("/next-btn.svg") no-repeat right;
+	background: url("/assets/icons/next-btn.svg") no-repeat right;
 	background-size: 66px; /* Устанавливаем размер изображения */
 }
 
-/* 
 li[role="presentation"] {
 	display: none;
-} */
+}
