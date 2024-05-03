@@ -1,30 +1,23 @@
-.grid-container {
+#grid-container {
 	display: grid;
-	grid-template-rows: auto 1fr auto;
+	grid-template-rows: auto;
+	grid-template-columns: auto;
 	min-height: 100%;
 	width: 100%;
 }
 
 .main-content {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(3, 1fr);
-	grid-template-areas:
-		"introduction introduction introduction introduction"
-		"directions directions directions directions"
-		"M    M    M  M";
-	gap: 3rem;
-	justify-items: center;
-	align-items: center;
+	display: flex;
+	flex-direction: column;
 	&__section_introduction {
-		grid-area: introduction;
 		display: grid;
 		justify-items: center;
-		margin: 2rem;
+		justify-content: center;
+		margin: 5rem;
 		grid-template-areas: "video_main text_main";
+		align-items: center;
 	}
 	&__section_directions {
-		grid-area: directions;
 		width: 100%;
 	}
 	&__block_video {
@@ -32,6 +25,7 @@
 	}
 	&__block-text {
 		width: 40rem;
+		height: 13rem;
 		padding: 2rem;
 		margin: 2rem;
 		grid-area: text_main;
@@ -46,6 +40,7 @@
 			@extend %font-family-aromo;
 		}
 		&__paragraph_two {
+			padding: 3rem 0rem 0rem 0rem;
 			@extend %font-family-aromo_700;
 		}
 	}
@@ -59,6 +54,7 @@
 			"B    f    C";
 		background-color: hsl(240, 90%, 96%);
 		width: 100%;
+		gap: 2rem;
 	}
 	&__h1 {
 		grid-area: A;
@@ -82,7 +78,7 @@
 		align-items: center;
 		/* Отступы между колонками */
 		column-gap: 20px;
-		margin: 1rem;
+		margin: 1.3rem;
 		width: 33rem;
 	}
 	&__text-directions {
@@ -90,18 +86,19 @@
 	}
 	&__section-text {
 		display: grid;
+		width: 50%;
 		grid-template-areas:
 			"D A A "
 			"D B B";
-		width: 753px;
-		margin: 2rem 0rem 2rem 30rem;
 		justify-content: center;
 		justify-items: center;
+		padding: 4rem 15rem 4rem 23rem;
 		&__paragraph_purpose {
 			margin: 3rem 1rem 0rem 1rem;
 			grid-area: A;
 			@extend %font-family-aromo;
 			&__slogan {
+				font-size: 1.5rem;
 				grid-area: B;
 				@extend %font-family-aromo_700;
 			}
@@ -115,3 +112,117 @@
 .icons-family {
 	grid-area: D;
 }
+.wave {
+	--c: #007ab6;
+	--t: -23px;
+	--h: 27px;
+	--w: 315px;
+	--p: 10.7px;
+	background: radial-gradient(
+			farthest-side at 34% calc(124% + var(--p)),
+			transparent 51%,
+			var(--c) 54% calc(65% + var(--t)),
+			transparent calc(67% + var(--t))
+		),
+		radial-gradient(
+			farthest-side at 48% calc(-72% - var(--p)),
+			transparent 70%,
+			var(--c) 72% calc(84% + var(--t)),
+			transparent calc(88% + var(--t))
+		);
+	background-size: var(--w) var(--h);
+	background-position: calc(var(--w) / 2) calc(var(--h) / 2),
+		-44px calc(var(--h) / 2);
+	margin: 28px 0;
+	display: inline-block;
+	width: 100%;
+	height: 26px;
+}
+
+.slick-dots {
+	display: flex !important;
+}
+
+.classes {
+	text-align: center;
+	margin: 40px auto;
+	@extend %font-family-aromo_700;
+	font-size: 2rem;
+}
+
+.classes__slide {
+	&__text-photos {
+		display: flex;
+		align-items: center;
+		height: 18rem;
+		width: 41rem;
+	}
+}
+
+li {
+	list-style-type: none;
+	@extend %font-family-aromo;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.slick-wrapper {
+	position: relative;
+	max-width: 90%;
+	width: 100rem;
+	margin: 30px auto;
+	min-width: 50%;
+}
+.slick-list {
+	overflow: hidden;
+}
+.slick-track {
+	display: flex;
+
+	justify-content: space-around;
+	overflow: hidden;
+}
+
+.slide_1 {
+	background: linear-gradient(
+		45deg,
+		hsla(184, 78%, 93%, 0.788),
+		hsl(212, 92%, 90%),
+		hsl(237, 88%, 91%)
+	);
+}
+
+.slick-prev {
+	left: -78px;
+	background: url("/prev-btn.svg") no-repeat left;
+	background-size: 66px; /* Устанавливаем размер изображения */
+}
+.slick-slide {
+	min-height: 343px;
+	max-width: 1240px;
+	justify-content: center;
+}
+
+.slick-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 98px;
+	height: 98px;
+	border: none;
+	cursor: pointer;
+	z-index: 100;
+}
+.slick-next {
+	right: -78px;
+	background: url("/next-btn.svg") no-repeat right;
+	background-size: 66px; /* Устанавливаем размер изображения */
+}
+
+/* 
+li[role="presentation"] {
+	display: none;
+} */
