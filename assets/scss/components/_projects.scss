@@ -1,0 +1,45 @@
+.projects {
+	text-align: center;
+	margin: 40px auto;
+	&__slide {
+		display: flex;
+		width: 43rem !important;
+		flex-direction: row;
+		align-items: center;
+		border-radius: 62px;
+		margin: 2rem 2rem 2rem 2rem;
+		background: linear-gradient(
+			91deg,
+			rgba(156, 213, 226, 0.41),
+			rgba(215, 237, 249, 0.58),
+			rgba(211, 214, 248, 0.68),
+			rgba(210, 216, 249, 0.67),
+			rgba(212, 230, 247, 0.68),
+			rgba(196, 230, 238, 0.69)
+		);
+	}
+
+	&__img-dari-food,
+	&__img-who-who-lives-in-the-teremochka,
+	&__img-adaptive-sports–equal-opportunities {
+		width: 40%;
+	}
+	&__projects__heading {
+		@extend %font-family-aromo_700;
+	}
+	&__content-slide {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 19rem;
+		width: 23rem;
+		justify-content: space-between;
+	}
+	&__heading {
+		@extend %font-family-aromo_700;
+		font-size: 1.5rem;
+	}
+	&__paragraph {
+		@extend %font-family-aromo;
+	}
+}

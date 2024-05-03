@@ -1,0 +1,82 @@
+.footer-content {
+	display: flex;
+	color: white;
+	height: 12rem;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(
+		to right,
+		hsla(207, 100%, 91%, 0.753),
+		hsla(184, 100%, 84%, 0.781),
+		hsla(184, 87%, 79%, 0.712),
+		hsla(193, 100%, 82%, 0.726),
+		hsla(202, 100%, 87%, 0.719),
+		hsla(216, 100%, 85%, 0.699),
+		hsla(230, 100%, 84%, 0.733),
+		hsla(227, 100%, 86%, 0.664),
+		hsla(232, 97%, 87%, 0.671)
+	);
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+		width: 65%;
+		height: 6rem;
+	}
+}
+
+.footer {
+	&__row-1,
+	&__oki,
+	&__email,
+	&__phone,
+	&__vk {
+		color: $accent-color;
+		@extend %rubik-family-text;
+	}
+	&__contact_email_vk {
+		display: flex;
+		height: 6rem;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+		text-align: center;
+	}
+	&__contact_phone-oki {
+		display: flex;
+		height: 6rem;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0rem 0rem 0rem 2rem;
+	}
+	&__email {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		width: 13rem;
+	}
+	&__vk {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		width: 11.5rem;
+	}
+	&__phone {
+		display: flex;
+		background-color: #fafcfe;
+		border-radius: 50px;
+		height: 2rem;
+		width: 14rem;
+		justify-content: space-around;
+		align-items: center;
+	}
+	&__oki {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		width: 13rem;
+	}
+}
