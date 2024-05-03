@@ -139,136 +139,8 @@
 	height: 26px;
 }
 
-.classes__wrapper {
-	&__container-img {
-		max-width: 100%;
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(1, 1fr);
-		grid-template-areas:
-			"A A"
-			"N D";
-		gap: 0.5rem;
-		background: url(/assets/icons/1613326244_13-p-krasivii-sinii-fon-gradient-20.jpg);
-		border-radius: 7px;
-		margin: 1rem;
-		align-items: baseline;
-	}
-	&__container-img img {
-		-webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
-		border-radius: 9px;
-	}
-	&__img-swimming1,
-	&__img-football1,
-	&__img-rowing1,
-	&__img-rock-climbing1,
-	&__img-modeling-agency1,
-	&__img-wushu1,
-	&__img-skis-roller-skates-OFP1,
-	&__img-powerlifting-OFP1,
-	&__img-basketball1,
-	&__img-table-tennis1,
-	&__img-art-studio1,
-	&__img-solar-volunteers1 {
-		width: 100%;
-		grid-area: A;
-	}
-	&__img-swimming2,
-	&__img-football2,
-	&__img-rowing2,
-	&__img-rock-climbing2,
-	&__img-modeling-agency2,
-	&__img-wushu2,
-	&__img-skis-roller-skates-OFP2,
-	&__img-powerlifting-OFP2,
-	&__img-basketball2,
-	&__img-table-tennis2,
-	&__img-art-studio2,
-	&__img-solar-volunteers2 {
-		width: 100%;
-		grid-area: N;
-	}
-
-	&__img-swimming3,
-	&__img-football3,
-	&__img-rowing3,
-	&__img-rock-climbing3,
-	&__img-modeling-agency3,
-	&__img-wushu3,
-	&__img-skis-roller-skates-OFP3,
-	&__img-powerlifting-OFP3,
-	&__img-basketball3,
-	&__img-table-tennis3,
-	&__img-art-studio3,
-	&__img-solar-volunteers3 {
-		width: 100%;
-		grid-area: D;
-	}
-	&__description {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		height: 15rem;
-		justify-content: space-between;
-	}
-	&__link-for-details {
-		display: flex;
-		background-color: $link-color;
-		color: $text-link-color;
-		border-radius: 50px;
-		height: 2rem;
-		width: 14rem;
-		justify-content: space-around;
-		align-items: center;
-		@extend %font-family-aromo;
-	}
-	&__paragraph {
-		width: 23rem;
-		@extend %font-family-aromo;
-	}
-	&__h2 {
-		@extend %font-family-aromo_700;
-	}
-}
-
 .slick-dots {
 	display: flex !important;
-}
-
-.projects {
-	&__slide {
-		display: flex;
-		width: 43rem !important;
-		flex-direction: row !important;
-		align-items: center !important;
-		border-radius: 62px;
-		margin: 2rem 2rem 2rem 2rem;
-	}
-
-	&__wrapper__img-dari-food,
-	&__wrapper__img-who-who-lives-in-the-teremochka,
-	&__wrapper__img-adaptive-sports–equal-opportunities {
-		width: 40%;
-	}
-	&__projects__heading {
-		@extend %font-family-aromo_700;
-	}
-	&__content-slide {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		height: 19rem;
-		width: 23rem;
-		justify-content: space-between;
-	}
-	&__heading {
-		@extend %font-family-aromo_700;
-		font-size: 1.5rem;
-	}
-	&__paragraph {
-		@extend %font-family-aromo;
-	}
 }
 
 .classes {
@@ -291,3 +163,66 @@ li {
 	list-style-type: none;
 	@extend %font-family-aromo;
 }
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.slick-wrapper {
+	position: relative;
+	max-width: 90%;
+	width: 100rem;
+	margin: 30px auto;
+	min-width: 50%;
+}
+.slick-list {
+	overflow: hidden;
+}
+.slick-track {
+	display: flex;
+
+	justify-content: space-around;
+	overflow: hidden;
+}
+
+.slide_1 {
+	background: linear-gradient(
+		45deg,
+		hsla(184, 78%, 93%, 0.788),
+		hsl(212, 92%, 90%),
+		hsl(237, 88%, 91%)
+	);
+}
+
+.slick-prev {
+	left: -78px;
+	background: url("/prev-btn.svg") no-repeat left;
+	background-size: 66px; /* Устанавливаем размер изображения */
+}
+.slick-slide {
+	min-height: 343px;
+	max-width: 1240px;
+	justify-content: center;
+}
+
+.slick-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 98px;
+	height: 98px;
+	border: none;
+	cursor: pointer;
+	z-index: 100;
+}
+.slick-next {
+	right: -78px;
+	background: url("/next-btn.svg") no-repeat right;
+	background-size: 66px; /* Устанавливаем размер изображения */
+}
+
+/* 
+li[role="presentation"] {
+	display: none;
+} */
