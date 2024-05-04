@@ -682,6 +682,10 @@ li[role=presentation] {
   align-items: center;
   text-decoration: none;
 }
+.classes__wrapper__link-for-details:hover {
+  background: #6cabfd;
+  color: #fff;
+}
 .classes__wrapper__paragraph {
   width: 23rem;
 }
@@ -779,6 +783,14 @@ li[role=presentation] {
   justify-content: space-around;
   align-items: center;
   text-decoration: none;
+}
+.news__link-for-details:hover {
+  background: #6cabfd;
+  color: #ffffff;
+}
+.news__link-for-details:focus {
+  background: rgb(4, 0, 255);
+  color: #ffffff;
 }
 
 .container__partners {
