@@ -57,13 +57,13 @@
 							<a class="menu__link" href="#class">Занятия</a>
 						</li>
 						<li class="menu__item">
-							<a class="menu__link" href="#event">Проекты</a>
+							<a class="menu__link" href="#project">Проекты</a>
 						</li>
 						<li class="menu__item">
-							<a class="menu__link" href="#bot">Новости</a>
+							<a class="menu__link" href="#news">Новости</a>
 						</li>
 						<li class="menu__item">
-							<a class="menu__link" href="#bot">Партнёры</a>
+							<a class="menu__link" href="#partners">Партнёры</a>
 						</li>
 						<li class="menu__item">
 							<a class="menu__link" href="#bot">Контакты</a>
@@ -71,7 +71,6 @@
 					</ul>
 				</nav>
 			</header>
-
 			<main class="main-content">
 				<section class="main-content__section_introduction">
 					<div class="main-content__block_video">
@@ -186,8 +185,8 @@
 							class="icons-family"
 						/>
 						<p class="main-content__section-text__paragraph_purpose">
-							Предметом деятельности организации является помощь в интеграции и
-							социальная адаптация, реабилитация и абилитация лиц с
+							<b>Предметом деятельности организации является</b> помощь в
+							интеграции и социальная адаптация, реабилитация и абилитация лиц с
 							ограниченными возможностями здоровья, содействие улучшению
 							качества жизни их семей.
 						</p>
@@ -557,7 +556,7 @@
 					</div>
 				</div>
 				<div class="wave"></div>
-				<h2 class="projects">Проекты</h2>
+				<h2 class="projects" id="project">Наши проекты</h2>
 				<div class="projects__wrapper slick-wrapper">
 					<div class="projects__slide slick-slide">
 						<img
@@ -634,7 +633,7 @@
 					</div>
 				</div>
 				<div class="wave"></div>
-				<h2 class="news">Новости</h2>
+				<h2 class="news" id="news">События, новости и мероприятия</h2>
 				<div class="news__wrapper slick-wrapper">
 					<div class="news__container-with-photo-text-news-link">
 						<div class="news__slide slick-slide">
@@ -676,8 +675,43 @@
 					</div>
 				</div>
 				<div class="wave"></div>
-				<div></div>
+				<h2 class="partners">Партнёры и друзья</h2>
+				<div class="container__partners" id="partners">
+					<article class="container__section_one_with_partners">
+						<p>Voronezh club Reging dragon</p>
+						<p>Теннисный центр "Sparta"</p>
+						<p>СДЮCШОР г. Воронеж</p>
+						<p>Горный клуб г. Воронеж</p>
+						<p>Новоусманская СОШ N3 с. Новая Усмань</p>
+						<p>“Даунсайд ап” и “Синдром любви” г. Москва</p>
+						<p>Спортивно-развивающий центр “Дао Дэн Лин”</p>
+					</article>
+					<article class="container__section_two_with_partners">
+						<p>Департамент физической культуры и спорта Воронежской области</p>
+						<p>Специальная Олимпиада России в Воронежской области</p>
+						<p>Международное модельное агентство "Models"</p>
+						<p>Благотворительный фонд святителя Антония Смирницкого</p>
+						<p>Дочки-сыночки</p>
+						<p>Олимп</p>
+						<p>Лето вместе</p>
+						<p>ГСРК "Шёлковый путь"</p>
+					</article>
+					<article class="container__section_three_with_partners">
+						<p>Типография "Антариус"</p>
+						<p>СберБанк</p>
+						<p>Союз православных фотографов</p>
+						<p>Благотворительный фонд «Благотворительный фонд Чижова»</p>
+						<p>Благотворительный фонд Хамина</p>
+						<p>ТРЦ «Московский проспект»</p>
+						<p>Магазин товаров для спорта “Decathlon”</p>
+					</article>
+				</div>
 			</main>
+			<button
+				onclick="topFunction()"
+				id="scroll-btn"
+				title="Прокрутить вверх"
+			></button>
 			<footer class="footer-content">
 				<div class="footer-content__wrapper">
 					<div class="footer-content__documents_and_details">
@@ -705,7 +739,8 @@
 						>+7 (952) 953-55-00</a
 					>
 					<a href="https://ok.ru/group/55794821890054" class="footer__oki"
-						><img src="./assets/icons/oki.svg" />Мы в одноклассниках</a
+						><img src="./assets/icons/oki.svg" alt="icon-oki" />Мы в
+						одноклассниках</a
 					>
 				</div>
 			</footer>

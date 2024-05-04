@@ -1,6 +1,9 @@
 .projects {
 	text-align: center;
 	margin: 40px auto;
+	text-transform: uppercase;
+	font-size: 2rem;
+	@extend %font-family-aromo_700;
 	&__slide {
 		display: flex;
 		width: 43rem !important;
@@ -17,6 +20,7 @@
 			rgba(212, 230, 247, 0.68),
 			rgba(196, 230, 238, 0.69)
 		);
+		box-shadow: -1px 6px 7px 0px rgba(34, 60, 80, 0.22);
 	}
 
 	&__img-dari-food,
