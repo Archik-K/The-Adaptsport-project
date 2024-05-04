@@ -81,6 +81,7 @@
 		justify-content: space-around;
 		align-items: center;
 		@extend %font-family-aromo;
+		text-decoration: none;
 	}
 	&__paragraph {
 		width: 23rem;
@@ -115,4 +116,13 @@
 	align-items: center;
 	border-radius: 62px;
 	margin: 2rem 2rem 2rem 2rem;
+	box-shadow: -1px 6px 7px 0px rgba(34, 60, 80, 0.22);
+}
+
+.classes {
+	text-align: center;
+	margin: 40px auto;
+	@extend %font-family-aromo_700;
+	font-size: 2rem;
+	text-transform: uppercase;
 }
