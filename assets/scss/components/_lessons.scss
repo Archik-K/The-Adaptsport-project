@@ -82,6 +82,10 @@
 		align-items: center;
 		@extend %font-family-aromo;
 		text-decoration: none;
+		&:hover {
+			background: #6cabfd;
+			color: #fff;
+		}
 	}
 	&__paragraph {
 		width: 23rem;

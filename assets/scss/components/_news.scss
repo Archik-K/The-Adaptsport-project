@@ -31,7 +31,7 @@
 	&__link-for-details {
 		display: flex;
 		background-color: #0007ab;
-		color: #ffffff;
+		color: $text-link-color;
 		border-radius: 50px;
 		height: 3rem;
 		width: 15rem;
@@ -39,5 +39,13 @@
 		align-items: center;
 		@extend %font-family-aromo;
 		text-decoration: none;
+		&:hover {
+			background: #6cabfd;
+			color: $text-link-color;
+		}
+		&:focus {
+			background: rgb(4, 0, 255);
+			color: $text-link-color;
+		}
 	}
 }
