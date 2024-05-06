@@ -1,5 +1,5 @@
 .container {
-	&__partners {
+	&-partners {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;
@@ -18,9 +18,16 @@
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: space-evenly;
-		padding: 4rem;
+		padding: 3rem;
 		@extend %font-family-aromo;
 		box-shadow: -1px 6px 7px 0px rgba(34, 60, 80, 0.22);
+	}
+	&__list_partners {
+		height: 20rem;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
 	}
 }
 
