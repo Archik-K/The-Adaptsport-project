@@ -1,4 +1,9 @@
-.classes__wrapper {
+.classes {
+	text-align: center;
+	margin: 40px auto;
+	@extend %font-family-aromo_700;
+	font-size: 2rem;
+	text-transform: uppercase;
 	&__container-img {
 		max-width: 100%;
 		display: grid;
@@ -18,49 +23,15 @@
 		-moz-border-radius: 4px;
 		border-radius: 9px;
 	}
-	&__img-swimming1,
-	&__img-football1,
-	&__img-rowing1,
-	&__img-rock-climbing1,
-	&__img-modeling-agency1,
-	&__img-wushu1,
-	&__img-skis-roller-skates-OFP1,
-	&__img-powerlifting-OFP1,
-	&__img-basketball1,
-	&__img-table-tennis1,
-	&__img-art-studio1,
-	&__img-solar-volunteers1 {
+	&__img1 {
 		width: 100%;
 		grid-area: A;
 	}
-	&__img-swimming2,
-	&__img-football2,
-	&__img-rowing2,
-	&__img-rock-climbing2,
-	&__img-modeling-agency2,
-	&__img-wushu2,
-	&__img-skis-roller-skates-OFP2,
-	&__img-powerlifting-OFP2,
-	&__img-basketball2,
-	&__img-table-tennis2,
-	&__img-art-studio2,
-	&__img-solar-volunteers2 {
+	&__img2 {
 		width: 100%;
 		grid-area: N;
 	}
-
-	&__img-swimming3,
-	&__img-football3,
-	&__img-rowing3,
-	&__img-rock-climbing3,
-	&__img-modeling-agency3,
-	&__img-wushu3,
-	&__img-skis-roller-skates-OFP3,
-	&__img-powerlifting-OFP3,
-	&__img-basketball3,
-	&__img-table-tennis3,
-	&__img-art-studio3,
-	&__img-solar-volunteers3 {
+	&__img3 {
 		width: 100%;
 		grid-area: D;
 	}
@@ -71,7 +42,7 @@
 		height: 15rem;
 		justify-content: space-between;
 	}
-	&__link-for-details {
+	&__link {
 		display: flex;
 		background-color: $link-color;
 		color: $text-link-color;
@@ -91,42 +62,35 @@
 		width: 23rem;
 		@extend %font-family-aromo;
 	}
-	&__h2 {
+	&__title {
 		@extend %font-family-aromo_700;
 	}
-}
-
-.classes__slide {
-	background: linear-gradient(
-		88deg,
-		hsl(124deg 80% 96% / 85%),
-		hsl(212deg 91% 87% / 58%),
-		hsl(238deg 87% 88% / 52%)
-	);
-}
-.classes__slide:nth-child(2n) {
-	background: linear-gradient(
-		79deg,
-		hsl(238deg 87% 88% / 46%),
-		hsl(212deg 91% 87% / 56%),
-		hsl(124, 80%, 96%)
-	);
-}
-
-.classes__slide {
-	display: flex;
-	width: 45rem !important;
-	flex-direction: row;
-	align-items: center;
-	border-radius: 62px;
-	margin: 2rem 2rem 2rem 2rem;
-	box-shadow: -1px 6px 7px 0px rgba(34, 60, 80, 0.22);
-}
-
-.classes {
-	text-align: center;
-	margin: 40px auto;
-	@extend %font-family-aromo_700;
-	font-size: 2rem;
-	text-transform: uppercase;
+	&__text-photos {
+		display: flex;
+		align-items: center;
+		height: 18rem;
+		width: 41rem;
+	}
+	&__slide {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		border-radius: 62px;
+		margin: 2rem 2rem 2rem 2rem;
+		box-shadow: -1px 6px 7px 0px rgba(34, 60, 80, 0.22);
+		background: linear-gradient(
+			88deg,
+			hsl(124deg 80% 96% / 85%),
+			hsl(212deg 91% 87% / 58%),
+			hsl(238deg 87% 88% / 52%)
+		);
+		&:nth-child(2n) {
+			background: linear-gradient(
+				79deg,
+				hsl(238deg 87% 88% / 46%),
+				hsl(212deg 91% 87% / 56%),
+				hsl(124, 80%, 96%)
+			);
+		}
+	}
 }

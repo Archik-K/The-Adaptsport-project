@@ -6,11 +6,10 @@
 	@extend %font-family-aromo_700;
 	&__slide {
 		display: flex;
-		width: 43rem !important;
 		flex-direction: row;
 		align-items: center;
 		border-radius: 62px;
-		margin: 2rem 2rem 2rem 2rem;
+		margin: 2rem;
 		background: linear-gradient(
 			91deg,
 			rgba(156, 213, 226, 0.41),
@@ -22,13 +21,10 @@
 		);
 		box-shadow: -1px 6px 7px 0px rgba(34, 60, 80, 0.22);
 	}
-
-	&__img-dari-food,
-	&__img-who-who-lives-in-the-teremochka,
-	&__img-adaptive-sports–equal-opportunities {
+	&__img {
 		width: 40%;
 	}
-	&__projects__heading {
+	&__title {
 		@extend %font-family-aromo_700;
 	}
 	&__content-slide {
@@ -45,5 +41,25 @@
 	}
 	&__paragraph {
 		@extend %font-family-aromo;
+	}
+	&__link {
+		display: flex;
+		background-color: #0007ab;
+		color: $text-link-color;
+		border-radius: 50px;
+		height: 2rem;
+		width: 15rem;
+		justify-content: space-around;
+		align-items: center;
+		@extend %font-family-aromo;
+		text-decoration: none;
+		&:hover {
+			background: #6cabfd;
+			color: $text-link-color;
+		}
+		&:focus {
+			background: rgb(4, 0, 255);
+			color: $text-link-color;
+		}
 	}
 }

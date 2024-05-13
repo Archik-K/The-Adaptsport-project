@@ -6,10 +6,10 @@
 	width: 100%;
 }
 
-.main-content {
+.main {
 	display: flex;
 	flex-direction: column;
-	&__section_introduction {
+	&__introduction {
 		display: grid;
 		justify-items: center;
 		justify-content: center;
@@ -20,10 +20,10 @@
 	&__section_directions {
 		width: 100%;
 	}
-	&__block_video {
+	&__video {
 		grid-area: video_main;
 	}
-	&__block-text {
+	&__text {
 		width: 35rem;
 		height: 13rem;
 		padding: 2rem;
@@ -36,15 +36,15 @@
 			hsl(237, 88%, 91%)
 		);
 		border-radius: 62px;
-		&__paragraph_one {
-			@extend %font-family-aromo;
-		}
-		&__paragraph_two {
-			padding: 3rem 0rem 0rem 0rem;
-			@extend %font-family-aromo_700;
-		}
 	}
-	&__block-directions_organization {
+	&__paragraph-one {
+		@extend %font-family-aromo;
+	}
+	&__paragraph-two {
+		padding: 3rem 0rem 0rem 0rem;
+		@extend %font-family-aromo_700;
+	}
+	&__directions-organization {
 		display: grid;
 		align-items: center;
 		justify-items: center;
@@ -56,23 +56,19 @@
 		width: 100%;
 		gap: 2rem;
 	}
-	&__h1 {
+	&__title {
 		grid-area: A;
 		@extend %font-family-aromo_700;
 	}
-	&__grid-row_1 {
+	&__column-1 {
 		grid-area: B;
 		@extend %font-family-aromo;
 	}
-	&__grid-row_2 {
+	&__column-2 {
 		grid-area: C;
 		@extend %font-family-aromo;
 	}
-	&__paragraph_about_help,
-	&__paragraph_about_sports,
-	&__paragraph_about_education,
-	&__paragraph_about_culture,
-	&__paragraph_about_sociality {
+	&__container-text-img {
 		display: grid;
 		grid-template-columns: auto 1fr;
 		align-items: center;
@@ -96,31 +92,30 @@
 			"W W D B B B O O";
 		justify-items: center;
 		align-items: center;
-
-		&__paragraph_purpose {
-			display: flex;
-			margin: 1rem 10rem 0rem 1rem;
-			width: 32rem;
-			text-align: center;
-			grid-area: A;
-			flex-direction: column;
-			@extend %font-family-aromo;
-			&__slogan {
-				margin: 1rem 10rem 0rem 1rem;
-				font-size: 1.5rem;
-				grid-area: B;
-				@extend %font-family-aromo_700;
-			}
-		}
+	}
+	&__purpose {
+		display: flex;
+		margin: 1rem 10rem 0rem 1rem;
+		width: 32rem;
+		text-align: center;
+		grid-area: A;
+		flex-direction: column;
+		@extend %font-family-aromo;
+	}
+	&__slogan {
+		margin: 1rem 10rem 0rem 1rem;
+		font-size: 1.5rem;
+		grid-area: B;
+		@extend %font-family-aromo_700;
+	}
+	&__icon {
+		max-width: 4.5rem;
+	}
+	&__icons-family {
+		grid-area: D;
 	}
 }
 
-.block__icon {
-	max-width: 4.5rem;
-}
-.icons-family {
-	grid-area: D;
-}
 .wave {
 	--c: #007ab6;
 	--t: -23px;
