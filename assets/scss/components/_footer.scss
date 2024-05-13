@@ -1,4 +1,4 @@
-.footer-content {
+.footer {
 	display: flex;
 	color: white;
 	height: 12rem;
@@ -17,7 +17,7 @@
 		hsla(227, 100%, 86%, 0.664),
 		hsla(232, 97%, 87%, 0.671)
 	);
-	&__wrapper {
+	&__section {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -25,46 +25,36 @@
 		width: 65%;
 		height: 6rem;
 	}
-}
-
-.footer {
-	&__row-1,
-	&__oki,
-	&__email,
-	&__phone,
-	&__vk {
+	&__link {
 		color: $accent-color;
 		@extend %rubik-family-text;
 	}
-	&__contact_email_vk {
+	&__section-contact {
 		display: flex;
+		width: 14rem;
 		height: 6rem;
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: space-between;
 		text-align: center;
 	}
-	&__contact_phone-oki {
-		display: flex;
-		height: 6rem;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-between;
-		margin: 0rem 0rem 0rem 2rem;
-	}
-	&__email {
+	&__social-email {
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
 		width: 13rem;
+		color: $accent-color;
+		@extend %rubik-family-text;
 	}
-	&__vk {
+	&__social-vk {
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
 		width: 11.5rem;
+		color: $accent-color;
+		@extend %rubik-family-text;
 	}
-	&__phone {
+	&__social-tel {
 		display: flex;
 		background-color: #fafcfe;
 		border-radius: 50px;
@@ -72,11 +62,15 @@
 		width: 14rem;
 		justify-content: space-around;
 		align-items: center;
+		color: $accent-color;
+		@extend %rubik-family-text;
 	}
-	&__oki {
+	&__social-oki {
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
 		width: 13rem;
+		color: $accent-color;
+		@extend %rubik-family-text;
 	}
 }
