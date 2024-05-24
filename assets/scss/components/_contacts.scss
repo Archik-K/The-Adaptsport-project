@@ -2,3 +2,68 @@
 	display: flex;
 	justify-content: space-around;
 }
+
+.container {
+}
+
+.contact {
+	h5 {
+		margin: 1rem 0;
+		font-size: 1rem;
+	}
+	span {
+		font-size: 0.8rem;
+	}
+	&__title {
+		text-align: center;
+		margin: 5rem auto;
+		font-size: 2rem;
+		text-transform: uppercase;
+		@extend %font-family-aromo_700;
+	}
+	&__image {
+		display: flex;
+		justify-content: center;
+		align-items: baseline;
+		margin: 5rem;
+		img {
+			width: 100%;
+			border-radius: 50%;
+		}
+	}
+	&__person {
+		position: relative;
+		min-height: 1px;
+		padding-right: 25px;
+		padding-left: 25px;
+		width: 16rem;
+	}
+	&__info {
+		text-align: center;
+		margin: 2rem 0;
+		@extend %font-family-aromo;
+	}
+	&__map {
+		text-align: center;
+		@extend %font-family-aromo;
+	}
+	&__row {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin: 3rem;
+	}
+	p {
+		@extend %font-family-aromo;
+		padding: 1rem;
+		font-size: 1.5rem;
+	}
+	&__column {
+		display: flex;
+		font-size: 1.5rem;
+		width: 18rem;
+		flex-direction: column;
+		padding: 2rem;
+		justify-content: space-around;
+	}
+}

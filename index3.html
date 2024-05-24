@@ -3,12 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/style/style.css" />
 		<title>Проекты</title>
 	</head>
 	<body>
 		<div id="grid-container">
 			<header class="header">
-				<a href="./index.html" class="header__logo">
+				<a href="./index.html" class="header__link">
 					<img
 						src="./assets/icons/adapt_sport.png"
 						alt="Логотип"
@@ -19,50 +20,78 @@
 					ВРООИ «Адаптспорт» - это сообщество, созданное родителями детей с
 					ограниченными возможностями здоровья
 				</p>
-				<div class="header__contact_phone">
+				<div class="header__contact">
 					<a href="tel:+79529535500" class="header__phone"
 						>+7 (952) 953-55-00</a
 					>
-				</div>
-				<div class="header__contact_email">
 					<a href="mailto:info@adaptsport.org" class="header__email"
 						>info@adaptsport.org</a
 					>
 				</div>
 				<div class="header__social">
 					<a href="https://vk.com/adaptsport">
-						<img
-							src="./assets/icons/vk.svg"
-							alt="VK"
-							class="header-social__icon"
-						/>
+						<img src="./assets/icons/vk.svg" alt="VK" class="header__vk" />
 					</a>
 					<a href="https://ok.ru/group/55794821890054">
-						<img
-							src="./assets/icons/oki.svg"
-							alt="ОК"
-							class="header-social__icon"
-						/>
+						<img src="./assets/icons/oki.svg" alt="ОК" class="header__ok" />
 					</a>
 				</div>
-				<a class="header__requisites" href="images/xxx.jpg">Реквезиты</a>
+				<div class="header__donations">
+					<a href="#" class="header__btn">Сделать пожертвование</a
+					><a class="header__requisites" href="images/xxx.jpg">Реквизиты</a>
+				</div>
 				<nav class="menu">
 					<ul class="menu__list" id="menu">
 						<li class="menu__item">
-							<a class="menu__link" href="#event">Проекты</a>
+							<a class="menu__link" href="./index.html">Главная</a>
 						</li>
 						<li class="menu__item">
-							<a class="menu__link" href="#bot">Новости</a>
+							<a class="menu__link" href="./index2.html">Занятия</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="./index4.html">Новости</a>
 						</li>
 						<li class="menu__item">
 							<a class="menu__link" href="#bot">Партнёры</a>
 						</li>
 						<li class="menu__item">
-							<a class="menu__link" href="#bot">Контакты</a>
+							<a class="menu__link" href="./index5.html">Контакты</a>
 						</li>
 					</ul>
 				</nav>
 			</header>
+			<footer class="footer">
+				<section class="footer__section">
+					<div class="footer__documents">
+						<a class="footer__link" href="#">Документы и реквизиты </a>
+					</div>
+					<div class="footer__report">
+						<a class="footer__link" href="#">Отчёты</a>
+					</div>
+				</section>
+				<section class="footer__section-contact">
+					<a href="mailto:info@adaptsport.org" class="footer__social-email"
+						><img
+							src="./assets/icons/email.svg"
+							alt="icon-email"
+						/>info@adaptsport.org</a
+					>
+					<a href="https://vk.com/adaptsport" class="footer__social-vk"
+						><img src="./assets/icons/vk.svg" alt="icon-vk" />Мы во ВКонтакте</a
+					>
+				</section>
+				<section class="footer__section-contact">
+					<a href="tel:+79529535500" class="footer__social-tel"
+						>+7 (952) 953-55-00
+					</a>
+					<a
+						href="https://ok.ru/group/55794821890054"
+						class="footer__social-oki"
+						><img src="./assets/icons/oki.svg" alt="icon-oki" />Мы в
+						одноклассниках</a
+					>
+				</section>
+			</footer>
 		</div>
 	</body>
 </html>
