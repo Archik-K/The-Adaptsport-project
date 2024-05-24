@@ -313,14 +313,14 @@ template {
   display: none;
 }
 
-.partners__list, .news__link, .news__paragraph, .projects__link, .projects__paragraph, .classes__paragraph, .classes__link, li, .main__purpose, .main__text-directions, .main__column-2, .main__column-1, .main__paragraph-one {
+.contact p, .contact__map, .contact__info, .partners__list, .news__link, .news__paragraph, .projects__link, .projects__paragraph, .classes__paragraph, .classes__link, li, .main__purpose, .main__text-directions, .main__column-2, .main__column-1, .main__paragraph-one {
   font-family: "Arimo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
-.partners, .news, .projects__heading, .projects__title, .projects, .classes__title, .classes, .main__slogan, .main__title, .main__paragraph-two {
+.contact__title, .partners, .news, .projects__heading, .projects__title, .projects, .classes__title, .classes, .main__slogan, .main__title, .main__paragraph-two {
   font-family: "Arimo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -334,22 +334,19 @@ template {
   font-style: normal;
 }
 
-.header__requisites, .header__social, .header__contact_phone, .header__contact_email {
-  margin: 0.5rem 8rem 0.1rem 0rem;
-}
-
 /*  тут пишем то что мы используем часто
  */
 .header {
   background: url(/assets/icons/1612746203_34-p-fon-drim-art-goluboi-59.png) no-repeat top/cover;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(2, 2fr);
-  grid-template-areas: "N A B B C C" "N A B B R R" "N A B B D D" "N A B B F F" "W W W W W W";
+  grid-template-areas: "N J A B B R R L P" "N J A B B R R L P" "N J A B B D D L P" "N J A B B F F F P" "W W W W W W W W W";
   align-content: stretch;
   justify-items: end;
   align-items: center;
   width: 100%;
+  height: 11rem;
 }
 .header__logo__img {
   width: 15rem;
@@ -364,25 +361,54 @@ template {
   color: #007ab6;
   grid-area: B;
 }
-.header__contact_email {
+.header__contact {
   grid-area: R;
-  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  width: 11.5rem;
+  height: 3rem;
+  justify-content: space-between;
+  align-items: flex-end;
 }
-.header__contact_phone {
-  grid-area: C;
-  font-size: 1.4rem;
+.header__email {
+  font-size: 0.7rem;
+  color: #007ab6;
 }
-.header__phone, .header__email {
+.header__phone {
+  font-size: 1rem;
   color: #007ab6;
 }
 .header__social {
   grid-area: D;
-  font-size: 0.9rem;
 }
 .header__requisites {
   grid-area: F;
   font-size: 0.9rem;
   color: #007ab6;
+}
+.header__donations {
+  grid-area: L;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 5rem;
+  width: 16rem;
+  justify-content: space-between;
+}
+.header__btn {
+  background-color: #007ab6;
+  color: #ffffff;
+  text-align: center;
+  width: 10rem;
+  height: 2.6rem;
+  padding: 0.2rem;
+  border-radius: 1rem;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+.header__btn:hover {
+  background: #0987ee;
+  color: #fff;
 }
 
 .menu {
@@ -648,7 +674,6 @@ li[role=presentation] {
   grid-template-rows: repeat(1, 1fr);
   grid-template-areas: "A A" "N D";
   gap: 0.5rem;
-  background: url(/assets/icons/1613326244_13-p-krasivii-sinii-fon-gradient-20.jpg);
   border-radius: 7px;
   margin: 1rem;
   align-items: baseline;
@@ -839,6 +864,62 @@ li[role=presentation] {
 
 .map {
   display: flex;
+  justify-content: space-around;
+}
+
+.contact h5 {
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+.contact span {
+  font-size: 0.8rem;
+}
+.contact__title {
+  text-align: center;
+  margin: 5rem auto;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.contact__image {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin: 5rem;
+}
+.contact__image img {
+  width: 100%;
+  border-radius: 50%;
+}
+.contact__person {
+  position: relative;
+  min-height: 1px;
+  padding-right: 25px;
+  padding-left: 25px;
+  width: 16rem;
+}
+.contact__info {
+  text-align: center;
+  margin: 2rem 0;
+}
+.contact__map {
+  text-align: center;
+}
+.contact__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 3rem;
+}
+.contact p {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.contact__column {
+  display: flex;
+  font-size: 1.5rem;
+  width: 18rem;
+  flex-direction: column;
+  padding: 2rem;
   justify-content: space-around;
 }
 
