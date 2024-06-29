@@ -48,4 +48,14 @@
 			color: $text-link-color;
 		}
 	}
+	&__item {
+		background-color: hsla(184, 23%, 95%, 1);
+		margin: 2px 2px 2px 2px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		font-size: 1rem;
+		width: 200px;
+	}
 }

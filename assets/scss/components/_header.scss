@@ -2,14 +2,14 @@
 	background: url(/assets/icons/1612746203_34-p-fon-drim-art-goluboi-59.png)
 		no-repeat top/ cover;
 	display: grid;
-	grid-template-columns: repeat(9, 1fr);
+	grid-template-columns: repeat(8, 1fr);
 	grid-template-rows: repeat(2, 2fr);
 	grid-template-areas:
-		"N J A B B R R L P"
-		"N J A B B R R L P"
-		"N J A B B D D L P"
-		"N J A B B F F F P"
-		"W W W W W W W W W";
+		"N J A B B R  L P"
+		"N J A B B R  L P"
+		"N J A B B D  L P"
+		"N J A B B F  L P"
+		"W W W W W W  W W";
 	align-content: stretch;
 	justify-items: end;
 	align-items: center;
@@ -51,13 +51,13 @@
 	&__social {
 		grid-area: D;
 	}
-	&__requisites {
+	&__donations {
 		grid-area: F;
 		font-size: 0.9rem;
 		color: $accent-color;
 		@extend %rubik-family-text;
 	}
-	&__donations {
+	/* 	&__donations {
 		grid-area: L;
 		display: flex;
 		flex-direction: column;
@@ -65,8 +65,8 @@
 		height: 5rem;
 		width: 16rem;
 		justify-content: space-between;
-	}
-	&__btn {
+	} */
+	/* 	&__btn {
 		background-color: $accent-color;
 		color: $text-link-color;
 		text-align: center;
@@ -80,6 +80,9 @@
 			background: #0987ee;
 			color: #fff;
 		}
+	} */
+	&__social a {
+		text-decoration: none; /* Убираем подчеркивание у всех ссылок внутри .header__social */
 	}
 }
 .menu {
