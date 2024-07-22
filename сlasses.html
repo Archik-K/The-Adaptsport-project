@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./assets/style/style.css" />
-		<title>Занятия</title>
+		<title>Плавание</title>
+		<style></style>
 	</head>
 	<body>
 		<div id="grid-container">
@@ -44,16 +45,16 @@
 				<nav class="menu">
 					<ul class="menu__list" id="menu">
 						<li class="menu__item">
-							<a class="menu__link" href="./index.html">Главная</a>
+							<a class="menu__link" href="/index.html">Главная</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="./index2.html">Занятия</a>
 						</li>
 						<li class="menu__item">
 							<a class="menu__link" href="./index3.html">Проекты</a>
 						</li>
 						<li class="menu__item">
-							<a class="menu__link" href="./index4.html">Новости</a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link" href="#bot">Партнёры</a>
+							<a class="menu__link" href="#news">Партнёры</a>
 						</li>
 						<li class="menu__item">
 							<a class="menu__link" href="./index5.html">Контакты</a>
@@ -61,21 +62,69 @@
 					</ul>
 				</nav>
 			</header>
-			<button
-				onclick="topFunction()"
-				id="scroll-btn"
-				title="Прокрутить вверх"
-			></button>
+			<main class="container">
+				<section class="container__swimming">
+					<div class="heading">
+						<h1>
+							Плавание в бассейнах "Три кита" для начинающих и детей ростом до
+							130см
+						</h1>
+						<h2>Директор: Монастырская Екатерина Анатольевна</h2>
+					</div>
+					<div class="branches">
+						<h3>Филиалы</h3>
+						<div class="branch-item">
+							<p>Адрес: ул. Наб. Ликарчительна, 28а</p>
+							<p>Расписание: Вт. и Вс. с 8:00 до 21:00, Сб. с 15:00 до 21:00</p>
+						</div>
+						<div class="branch-item">
+							<p>Адрес: Москвеева, 10</p>
+							<p>Расписание: Вт. и Чт. с 8:00 до 15:00, Сб. с 15:00 до 21:00</p>
+						</div>
+						<div class="branch-item">
+							<p>Адрес: Московский проспект, 111 6</p>
+						</div>
+					</div>
+					<div class="training">
+						<h3>Подготовка спортсменов</h3>
+						<div class="training-item">
+							<p>Адрес: Бассейн ВГУ, Московский пр., 88/1</p>
+						</div>
+						<div class="training-item">
+							<p>Бассейн "Дельфин"</p>
+							<p>Адрес: р.п. Холокольский, ул. Ленина 14 А</p>
+							<p>Тренер: Замятин Сергей Михайлович</p>
+						</div>
+					</div>
+					<div class="container-sld">
+						<div class="items">
+							<div class="item active">
+								<img src="/assets/icons/classes-swimming-img1.png" />
+							</div>
+							<div class="item next">
+								<img src="/assets/icons/classes-swimming-img2.png" />
+							</div>
+							<div class="item prev">
+								<img src="/assets/icons/classes-swimming-img3.png" />
+							</div>
+							<div class="button-container">
+								<div class="button"><i class="fas fa-angle-left"></i></div>
+								<div class="button"><i class="fas fa-angle-right"></i></div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
 			<footer class="footer">
-				<section class="footer__section">
+				<div class="footer__section">
 					<div class="footer__documents">
 						<a class="footer__link" href="#">Документы и реквизиты </a>
 					</div>
 					<div class="footer__report">
 						<a class="footer__link" href="#">Отчёты</a>
 					</div>
-				</section>
-				<section class="footer__section-contact">
+				</div>
+				<div class="footer__section-contact">
 					<a href="mailto:info@adaptsport.org" class="footer__social-email"
 						><img
 							src="./assets/icons/email.svg"
@@ -85,8 +134,8 @@
 					<a href="https://vk.com/adaptsport" class="footer__social-vk"
 						><img src="./assets/icons/vk.svg" alt="icon-vk" />Мы во ВКонтакте</a
 					>
-				</section>
-				<section class="footer__section-contact">
+				</div>
+				<div class="footer__section-contact">
 					<a href="tel:+79529535500" class="footer__social-tel"
 						>+7 (952) 953-55-00
 					</a>
@@ -96,8 +145,9 @@
 						><img src="./assets/icons/oki.svg" alt="icon-oki" />Мы в
 						одноклассниках</a
 					>
-				</section>
+				</div>
 			</footer>
 		</div>
+		<script src="./assets/script/script.js"></script>
 	</body>
 </html>

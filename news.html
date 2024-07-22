@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="./assets/icons/icon.png" type="image/png" />
 		<link rel="stylesheet" href="./assets/style/style.css" />
 		<title>Новости</title>
 	</head>
@@ -65,10 +66,26 @@
 				<div class="news">
 					<h2 class="news__title">СОБЫТИЯ, НОВОСТИ И МЕРОПРИЯТИЯ</h2>
 					<div class="news__box-container-arhiv">
+						<section class="news__item" data-news-id="1">
+							<img
+								class="news__item-image"
+								src="./assets/icons/news.png"
+								alt="Изображение новости"
+							/>
+							<span class="news__item-date">29 апреля 2024</span>
+							<h3 class="news__item-heading">
+								Акция "Активная весна" в "Адартспорте"
+							</h3>
+							<p class="news__item-description">
+								Проблемы нас берут порой в тиски, Жизнь регулярно нервы
+								напрягает — Избавиться от грусти и тоски Активный отдых очень
+								помогает.
+							</p>
+						</section>
 						<section class="news__item">
 							<img
 								class="news__item-image"
-								src="/assets/icons/news.png"
+								src="./assets/icons/news.png"
 								alt="News Image"
 							/>
 							<span class="news__item-date">29 апреля 2024</span>
@@ -84,7 +101,7 @@
 						<section class="news__item">
 							<img
 								class="news__item-image"
-								src="/assets/icons/news.png"
+								src="./assets/icons/news.png"
 								alt="News Image"
 							/>
 							<span class="news__item-date">29 апреля 2024</span>
@@ -100,23 +117,7 @@
 						<section class="news__item">
 							<img
 								class="news__item-image"
-								src="/assets/icons/news.png"
-								alt="News Image"
-							/>
-							<span class="news__item-date">29 апреля 2024</span>
-							<h3 class="news__item-heading">
-								Акция "Активная весна" в "Адартспорте"
-							</h3>
-							<p class="news__item-description">
-								Проблемы нас берут порой в тиски, Жизнь регулярно нервы
-								напрягает — Избавиться от грусти и тоски Активный отдых очень
-								помогает.
-							</p>
-						</section>
-						<section class="news__item">
-							<img
-								class="news__item-image"
-								src="/assets/icons/news.png"
+								src="./assets/icons/news.png"
 								alt="News Image"
 							/>
 							<span class="news__item-date">29 апреля 2024</span>
@@ -144,15 +145,15 @@
 				</div>
 			</main>
 			<footer class="footer">
-				<section class="footer__section">
+				<div class="footer__section">
 					<div class="footer__documents">
 						<a class="footer__link" href="#">Документы и реквизиты </a>
 					</div>
 					<div class="footer__report">
 						<a class="footer__link" href="#">Отчёты</a>
 					</div>
-				</section>
-				<section class="footer__section-contact">
+				</div>
+				<div class="footer__section-contact">
 					<a href="mailto:info@adaptsport.org" class="footer__social-email"
 						><img
 							src="./assets/icons/email.svg"
@@ -162,8 +163,8 @@
 					<a href="https://vk.com/adaptsport" class="footer__social-vk"
 						><img src="./assets/icons/vk.svg" alt="icon-vk" />Мы во ВКонтакте</a
 					>
-				</section>
-				<section class="footer__section-contact">
+				</div>
+				<div class="footer__section-contact">
 					<a href="tel:+79529535500" class="footer__social-tel"
 						>+7 (952) 953-55-00
 					</a>
@@ -173,8 +174,9 @@
 						><img src="./assets/icons/oki.svg" alt="icon-oki" />Мы в
 						одноклассниках</a
 					>
-				</section>
+				</div>
 			</footer>
 		</div>
+		<script src="./assets/script/news-detail.js"></script>
 	</body>
 </html>
