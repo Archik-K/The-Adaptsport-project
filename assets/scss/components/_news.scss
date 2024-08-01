@@ -60,6 +60,8 @@
 		flex-direction: column;
 		text-transform: none;
 		justify-content: space-between;
+
+		cursor: pointer;
 	}
 	&__box-container-arhiv {
 		display: flex;
@@ -139,8 +141,8 @@
 
 //Стили для индивидуальной страницы новости
 .container {
-	max-width: 800px;
-	margin: 0 auto;
+	max-width: 850px;
+	margin: 12rem auto 0 auto;
 	padding: 20px;
 }
 
@@ -178,30 +180,46 @@
 
 .active {
 	display: flex;
-}
-.prev,
-.next {
+} /* Общие стили для кнопок */
+.prev-btn,
+.next-btn {
 	cursor: pointer;
 	position: absolute;
 	top: 50%;
 	width: auto;
-	margin-top: -22px;
-	padding: 16px;
+	margin-top: -22px; /* Половина высоты кнопки для центрирования */
+	padding: 21px;
 	color: rgb(0, 0, 0);
 	font-weight: bold;
-	font-size: 18px;
 	transition: 0.6s ease;
-	border-radius: 0 3px 3px 0;
 	user-select: none;
+	border: none; /* Убираем стандартные рамки кнопки */
+	background: none; /* Убираем стандартный фон кнопки */
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-.next {
-	right: 0;
-	border-radius: 3px 0 0 3px;
+
+/* Стили для кнопки "влево" */
+.prev-btn {
+	left: 0; /* Позиционирование кнопки "влево" по левому краю */
+	border-radius: 3px 0 0 3px; /* Округление только с левой стороны */
+	background-image: url("/assets/icons/prev-btn.svg"); /* Фоновое изображение */
+	background-size: contain; /* Масштабирование изображения внутри элемента */
+	background-repeat: no-repeat; /* Без повторения изображения */
+	background-position: center; /* Центрирование изображения */
 }
-.prev:hover,
-.next:hover {
-	background-color: rgba(114, 114, 114, 0.8);
+
+/* Стили для кнопки "вправо" */
+.next-btn {
+	right: 0; /* Позиционирование кнопки "вправо" по правому краю */
+	border-radius: 3px 0 0 3px; /* Округление только с правой стороны */
+	background-image: url("/assets/icons/next-btn.svg"); /* Фоновое изображение */
+	background-size: contain; /* Масштабирование изображения внутри элемента */
+	background-repeat: no-repeat; /* Без повторения изображения */
+	background-position: center; /* Центрирование изображения */
 }
+
 .back-link {
 	display: block;
 	text-align: center;

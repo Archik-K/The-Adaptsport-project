@@ -345,8 +345,11 @@ template {
   align-content: stretch;
   justify-items: end;
   align-items: center;
+  position: fixed;
+  z-index: 1000;
   width: 100%;
   height: 11rem;
+  box-shadow: 0px 5px 5px -4px rgba(34, 60, 80, 0.33);
   /* 	&__donations {
   	grid-area: L;
   	display: flex;
@@ -455,6 +458,41 @@ template {
   transform-origin: 0 50%;
 }
 
+.menu__item {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  list-style: none;
+  z-index: 1000;
+  min-width: 200px; /* Установите минимальную ширину для submenu */
+}
+
+.submenu li {
+  padding: 8px 16px;
+}
+
+.submenu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.submenu li a:hover {
+  background-color: #f1f1f1; /* Добавьте фон при наведении */
+}
+
+.menu__item:hover .submenu {
+  display: block;
+}
+
 #grid-container {
   display: grid;
   grid-template-rows: auto;
@@ -466,6 +504,7 @@ template {
 .main {
   display: flex;
   flex-direction: column;
+  margin: 12rem 0 0;
 }
 .main__introduction {
   display: grid;
@@ -746,38 +785,82 @@ li[role=presentation] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem 0;
+  margin: 12rem 0 0;
 }
-
-.heading {
-  background-color: hsl(242, 47%, 38%);
+.container__classes-title {
+  background-color: rgb(47, 45, 124);
   color: white;
   padding: 20px;
   text-align: center;
-  border-radius: 10px;
-  width: 70rem;
+  border-radius: 20px;
+  width: 90rem;
+  height: 25rem;
+  box-shadow: 0px 5px 18px -8px rgba(34, 60, 80, 0.68);
+}
+.container__classes-branches-box1 {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem;
+  flex-direction: column;
+  align-items: center;
+  height: 20rem;
+}
+.container__classes-branches-box2 {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem;
+  flex-direction: column;
+  align-items: center;
+  height: 15rem;
+}
+.container__classes-addresses-box1 {
+  display: flex;
+  height: 11rem;
+  align-items: flex-end;
+  width: 75rem;
+  justify-content: space-between;
+}
+.container__classes-addresses-box2 {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem;
+  flex-direction: column;
+  align-items: center;
+  height: 16rem;
 }
 
 .branches,
 .training {
-  background-color: #7986cb;
+  background-color: hsla(202, 55%, 34%, 0.71);
+  text-align: center;
   color: white;
   padding: 20px;
-  margin: 20px 0;
-  border-radius: 10px;
+  margin: 20px 280px;
+  border-radius: 20px;
+  width: 55rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 5px 18px -8px rgba(34, 60, 80, 0.68);
 }
 
 .branch-item,
 .training-item {
-  background-color: hsl(216, 68%, 67%);
+  background-color: hsl(216, 49%, 59%);
   padding: 10px;
   margin: 10px 0;
-  border-radius: 5px;
-  width: 17rem;
+  border-radius: 15px;
+  width: 20rem;
+  height: 8rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+.training-item {
+  background-color: hsl(242, 47%, 38%);
 }
 
 .branch-item p,
@@ -790,6 +873,7 @@ li[role=presentation] {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  position: absolute;
 }
 
 .items .item {
@@ -837,8 +921,12 @@ li[role=presentation] {
   transform: translate(-50%, -50%);
   width: 63rem;
   z-index: 100;
+  display: flex;
+  justify-content: space-between; /* Размещаем кнопки по краям */
+  align-items: center; /* Центрирование по вертикали */
 }
 
+/* Стили для кнопок */
 .button-container .button {
   color: #fff;
   font-size: 32px;
@@ -848,29 +936,32 @@ li[role=presentation] {
   transition: all 300ms ease-in-out;
 }
 
+/* Эффект наведения */
 .button-container .button:hover {
   opacity: 1;
 }
 
+/* Стили для стрелок */
 .button-container .button:before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
-  background-color: rgb(0, 0, 0);
-  border-radius: 50%;
-  z-index: -99;
+  width: 50px; /* Размер стрелки */
+  height: 50px; /* Размер стрелки */
+  background-size: contain; /* Масштабирование изображения внутри элемента */
+  background-repeat: no-repeat; /* Без повторения изображения */
 }
 
-.button-container .button:nth-child(1) {
-  float: left;
+/* Стрелка "влево" */
+.button-container .button.prev:before {
+  background-image: url("/assets/icons/prev-btn.svg");
 }
 
-.button-container .button:nth-child(2) {
-  float: right;
+/* Стрелка "вправо" */
+.button-container .button.next:before {
+  background-image: url("/assets/icons/next-btn.svg");
 }
 
 .container-sld {
@@ -878,12 +969,114 @@ li[role=presentation] {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  height: 500px;
+  position: relative;
 }
 
-.n {
+.training-information,
+.box-information {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: 1rem;
+}
+
+.box2 {
+  width: 74rem;
+  height: 15rem;
+  margin: 20px 128px;
+}
+
+.box3 {
+  width: 25rem;
+}
+
+.box4 {
+  width: 41rem;
+  height: 14rem;
+}
+
+.box5 {
+  width: 88rem;
+  height: 28rem;
+  margin: 20px 3px;
+}
+
+.training-item-box1 {
+  background-color: #2f2c7a;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 15px;
+  width: 22rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.yu {
+  width: 11rem;
+  height: 8rem;
+}
+
+.box-rehabilitation {
+  background-color: hsl(216, 50%, 60%);
+  text-align: center;
+  color: white;
+  padding: 20px;
+  margin: 20px 495px;
+  border-radius: 20px;
+  width: 28rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 5px 18px -8px rgba(34, 60, 80, 0.68);
+}
+
+.container__swimming,
+.container__football {
+  margin: 15px 0;
+}
+
+.shell-box2 {
+  display: flex;
+  height: 30rem;
+  align-items: flex-end;
+  width: 68rem;
+  justify-content: space-between;
+}
+
+.block-with-an-age-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 22rem;
+}
+
+.box-information2 {
+  width: 20rem;
+  height: 20rem;
+}
+
+.cooperation {
+  background-color: rgba(1, 114, 58, 0.631372549);
+  border-radius: 20px;
+  width: 21rem;
+  margin: auto;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.shell {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  flex-direction: column;
+  align-items: center;
+  height: 10rem;
 }
 
 .projects {
@@ -995,6 +1188,7 @@ li[role=presentation] {
   flex-direction: column;
   text-transform: none;
   justify-content: space-between;
+  cursor: pointer;
 }
 .news__box-container-arhiv {
   display: flex;
@@ -1069,8 +1263,8 @@ li[role=presentation] {
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 850px;
+  margin: 12rem auto 0 auto;
   padding: 20px;
 }
 
@@ -1109,34 +1303,46 @@ li[role=presentation] {
 
 .active {
   display: flex;
-}
-
-.prev,
-.next {
+} /* Общие стили для кнопок */
+.prev-btn,
+.next-btn {
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -22px;
-  padding: 16px;
+  margin-top: -22px; /* Половина высоты кнопки для центрирования */
+  padding: 21px;
   color: rgb(0, 0, 0);
   font-weight: bold;
-  font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  border: none; /* Убираем стандартные рамки кнопки */
+  background: none; /* Убираем стандартный фон кнопки */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+/* Стили для кнопки "влево" */
+.prev-btn {
+  left: 0; /* Позиционирование кнопки "влево" по левому краю */
+  border-radius: 3px 0 0 3px; /* Округление только с левой стороны */
+  background-image: url("/assets/icons/prev-btn.svg"); /* Фоновое изображение */
+  background-size: contain; /* Масштабирование изображения внутри элемента */
+  background-repeat: no-repeat; /* Без повторения изображения */
+  background-position: center; /* Центрирование изображения */
 }
 
-.prev:hover,
-.next:hover {
-  background-color: rgba(114, 114, 114, 0.8);
+/* Стили для кнопки "вправо" */
+.next-btn {
+  right: 0; /* Позиционирование кнопки "вправо" по правому краю */
+  border-radius: 3px 0 0 3px; /* Округление только с правой стороны */
+  background-image: url("/assets/icons/next-btn.svg"); /* Фоновое изображение */
+  background-size: contain; /* Масштабирование изображения внутри элемента */
+  background-repeat: no-repeat; /* Без повторения изображения */
+  background-position: center; /* Центрирование изображения */
 }
 
 .back-link {
@@ -1268,7 +1474,7 @@ li[role=presentation] {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  width: 65%;
+  width: 50rem;
   height: 6rem;
 }
 .footer__link {
@@ -1312,5 +1518,13 @@ li[role=presentation] {
   align-items: center;
   justify-content: space-around;
   width: 13rem;
+  color: #007ab6;
+}
+.footer__rights {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  height: 6rem;
+  justify-content: flex-end;
   color: #007ab6;
 }/*# sourceMappingURL=style.css.map */

@@ -22,7 +22,7 @@
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: space-between;
-		width: 65%;
+		width: 50rem;
 		height: 6rem;
 	}
 	&__link {
@@ -72,5 +72,13 @@
 		width: 13rem;
 		color: $accent-color;
 		@extend %rubik-family-text;
+	}
+	&__rights {
+		display: flex;
+		flex-direction: column;
+		width: 30rem;
+		height: 6rem;
+		justify-content: flex-end;
+		color: $accent-color;
 	}
 }

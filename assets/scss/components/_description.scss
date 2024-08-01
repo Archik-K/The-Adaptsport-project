@@ -9,6 +9,7 @@
 .main {
 	display: flex;
 	flex-direction: column;
+	margin: 12rem 0 0;
 	&__introduction {
 		display: grid;
 		justify-items: center;
