@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="./assets/icons/icon.png" type="image/png" />
 		<link rel="stylesheet" href="./assets/style/style.css" />
-		<title>Поддержать проект</title>
+		<title>Отчеты по годам</title>
 	</head>
 	<body>
 		<div id="grid-container">
@@ -37,42 +38,107 @@
 					</a>
 				</div>
 				<div class="header__donations">
-					<a href="#" class="header__btn">Сделать пожертвование</a>
-					<a class="header__requisites" href="images/xxx.jpg">Реквизиты</a>
+					<a class="header__donations-requisites" href="images/xxx.jpg"
+						>Скачать реквизиты</a
+					>
 				</div>
 				<nav class="menu">
 					<ul class="menu__list" id="menu">
 						<li class="menu__item">
-							<a class="menu__link" href="./index.html">Главная</a>
+							<a class="menu__link" href="#title">Направления</a>
 						</li>
 						<li class="menu__item">
-							<a class="menu__link" href="./index3.html">Проекты</a>
+							<a class="menu__link" href="./сlasses.html">Занятия</a>
+							<ul class="submenu">
+								<li>
+									<a href="./сlasses.html#Section-for-swimming">Плавание</a>
+								</li>
+								<li>
+									<a href="./сlasses.html#Section-for-football">Мини-футбол</a>
+								</li>
+								<li><a href="./сlasses.html#Section-for-rowing">Гребля</a></li>
+								<li>
+									<a href="./сlasses.html#Section-for-adaptive-climbing"
+										>Адаптивное скалолазание</a
+									>
+								</li>
+								<li>
+									<a href="./сlasses.html#Section-for-a-modeling-agency"
+										>Модельное агенство</a
+									>
+								</li>
+								<li>
+									<a href="./сlasses.html#Section-for-wellness-wushu"
+										>Оздоровительное ушу</a
+									>
+								</li>
+								<li>
+									<a href="./сlasses.html#Section-for-cross-country-skiing"
+										>Беговые лыжи, скоростные ролики (летний период) и ОФП</a
+									>
+								</li>
+								<li>
+									<a href="./сlasses.html#Section-for-powerlifting-and-AFC"
+										>Пауэрлифтинг и АФК</a
+									>
+								</li>
+								<li>
+									<a href="./сlasses.html#Table-tennis-section"
+										>Настольный тенис</a
+									>
+								</li>
+								<li>
+									<a href="./сlasses.html#Section-for-art-studio">Арт-студия</a>
+								</li>
+								<li>
+									<a href="./сlasses.html#Section-for-solar-volunteers"
+										>Солнечные волонтёры</a
+									>
+								</li>
+							</ul>
 						</li>
 						<li class="menu__item">
-							<a class="menu__link" href="./index4.html">Новости</a>
+							<a class="menu__link" href="./projects.html">Проекты</a>
 						</li>
 						<li class="menu__item">
-							<a class="menu__link" href="#bot">Партнёры</a>
+							<a class="menu__link" href="./news.html">Новости</a>
 						</li>
 						<li class="menu__item">
-							<a class="menu__link" href="./index5.html">Контакты</a>
+							<a class="menu__link" href="#partners">Партнёры</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="./contacts.html">Контакты</a>
 						</li>
 					</ul>
 				</nav>
 			</header>
-			<button
-				onclick="topFunction()"
-				id="scroll-btn"
-				title="Прокрутить вверх"
-			></button>
+			<main class="container-reports">
+				<div class="year-selector">
+					<button data-year="2024" onclick="loadReports('2024')">2024</button>
+					<button data-year="2023" onclick="loadReports('2023')">2023</button>
+					<button data-year="2022" onclick="loadReports('2022')">2022</button>
+					<button data-year="2021" onclick="loadReports('2021')">2021</button>
+					<!-- Добавьте другие годы по мере необходимости -->
+				</div>
+
+				<ul id="report-list" class="report-list">
+					<!-- Отчеты будут загружаться сюда -->
+				</ul>
+			</main>
 			<footer class="footer">
 				<div class="footer__section">
 					<div class="footer__documents">
-						<a class="footer__link" href="#">Документы и реквизиты </a>
+						<a class="footer__link" href="./documents.html"
+							>Документы и реквизиты
+						</a>
 					</div>
 					<div class="footer__report">
-						<a class="footer__link" href="#">Отчёты</a>
+						<a class="footer__link" href="./reports.html">Отчёты</a>
 					</div>
+				</div>
+				<div class="footer__rights">
+					<p><strong>&copy;2024 Адаптспорт</strong></p>
+					<p>Все права защищены</p>
 				</div>
 				<div class="footer__section-contact">
 					<a href="mailto:info@adaptsport.org" class="footer__social-email"
@@ -98,5 +164,41 @@
 				</div>
 			</footer>
 		</div>
+		<script>
+			const reports = {
+				2024: ["report7.pdf", "report8.pdf"],
+				2023: ["report1.pdf", "report2.pdf"],
+				2022: ["report3.pdf", "report4.pdf"],
+				2021: ["report5.pdf", "report6.pdf"],
+			};
+
+			function loadReports(year) {
+				const buttons = document.querySelectorAll(".year-selector button");
+				buttons.forEach((button) => {
+					if (button.dataset.year === year) {
+						button.classList.add("active");
+					} else {
+						button.classList.remove("active");
+					}
+				});
+
+				const reportList = document.getElementById("report-list");
+				reportList.innerHTML = "";
+
+				if (reports[year]) {
+					reports[year].forEach((report) => {
+						const li = document.createElement("li");
+						li.innerHTML = `
+                        <img src="./assets/icons/icon-pdf.png" alt="File icon"> 
+                        <a href="path/to/reports/${report}" target="_blank">${report}</a>
+                    `;
+						reportList.appendChild(li);
+					});
+				}
+			}
+
+			// Загрузите отчеты за текущий год по умолчанию
+			loadReports("2024");
+		</script>
 	</body>
 </html>

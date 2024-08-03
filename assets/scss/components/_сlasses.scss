@@ -1,3 +1,7 @@
+body {
+	background-color: #fcfcfc;
+}
+
 .classes {
 	text-align: center;
 	margin: 40px auto;
@@ -168,7 +172,7 @@
 	padding: 10px;
 	margin: 10px 0;
 	border-radius: 15px;
-	width: 20rem;
+	width: 23rem;
 	height: 8rem;
 	display: flex;
 	justify-content: center;
@@ -388,4 +392,15 @@
 	flex-direction: column;
 	align-items: center;
 	height: 10rem;
+}
+
+.ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: disc;
+	text-align: left;
+}
+
+.ul li {
+	margin-left: 20px; /* Отступ для списка, можно настроить по необходимости */
 }

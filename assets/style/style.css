@@ -703,6 +703,10 @@ li[role=presentation] {
   background-size: cover;
 }
 
+body {
+  background-color: #fcfcfc;
+}
+
 .classes {
   text-align: center;
   margin: 40px auto;
@@ -851,7 +855,7 @@ li[role=presentation] {
   padding: 10px;
   margin: 10px 0;
   border-radius: 15px;
-  width: 20rem;
+  width: 23rem;
   height: 8rem;
   display: flex;
   justify-content: center;
@@ -1077,6 +1081,17 @@ li[role=presentation] {
   flex-direction: column;
   align-items: center;
   height: 10rem;
+}
+
+.ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: disc;
+  text-align: left;
+}
+
+.ul li {
+  margin-left: 20px; /* Отступ для списка, можно настроить по необходимости */
 }
 
 .projects {
@@ -1458,6 +1473,76 @@ li[role=presentation] {
   flex-direction: column;
   padding: 2rem;
   justify-content: space-around;
+}
+
+.container-reports {
+  max-width: 1000px;
+  margin: 250px auto 50px;
+  padding: 40px;
+  height: 400px;
+}
+
+.year-selector {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  border-bottom: 2px solid #ddd;
+}
+
+.year-selector::-webkit-scrollbar {
+  height: 8px;
+}
+
+.year-selector::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 4px;
+}
+
+.year-selector::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.year-selector button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px 45px;
+  margin-right: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 17px;
+}
+
+.year-selector button.active {
+  background-color: #0056b3;
+}
+
+.report-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.report-list li {
+  display: flex;
+  align-items: center;
+}
+
+.report-list img {
+  width: 42px;
+  height: 43px;
+  margin-right: 12px;
+}
+
+.report-list a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 16px;
 }
 
 .footer {
