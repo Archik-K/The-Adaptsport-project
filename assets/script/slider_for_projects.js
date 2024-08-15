@@ -56,4 +56,7 @@ const initSlider = (sliderId) => {
 };
 
 // Инициализация каждого слайдера
-initSlider("give_me_food");
+initSlider("give-me-food-slider");
+initSlider("teremochka-slider");
+initSlider("adaptive-sports-slider");
+initSlider("adaptive-tourism-slider");

@@ -1142,6 +1142,199 @@ body {
   background: rgb(4, 0, 255);
   color: #ffffff;
 }
+.projects-name {
+  width: 889px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-direction: row;
+  text-align: center;
+  margin: 0 auto;
+}
+.projects-branch-item {
+  background-color: #5b96b6;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 15px;
+  width: 13rem;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.basis-of-the-project {
+  background-color: #5b96b6;
+  width: 810px;
+  margin: 30px auto;
+  height: 87px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.container__projects {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 12rem 0 0;
+}
+.container__projects-title {
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  width: 90rem;
+  height: 27rem;
+  box-shadow: 0px 5px 18px -8px rgba(34, 60, 80, 0.68);
+  background-color: #377382;
+}
+.container__projects-address-box1 {
+  display: flex;
+  height: 11rem;
+  align-items: flex-end;
+  width: 90rem;
+  justify-content: space-between;
+}
+.container__projects-branches-box3 {
+  display: flex;
+  width: 89rem;
+  justify-content: space-evenly;
+  margin: 1rem;
+  flex-direction: column;
+  height: 15rem;
+  align-items: center;
+}
+
+.container__give-me-food, .container__teremochka {
+  margin: 15px 0;
+}
+
+.information {
+  background-color: #456e97;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  margin: 20px 280px;
+  border-radius: 20px;
+  width: 55rem;
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0px 5px 18px -8px rgba(34, 60, 80, 0.68);
+}
+
+.purpose {
+  background-color: #456e97;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  margin: 20px 129px;
+  border-radius: 20px;
+  width: 74rem;
+  height: 44rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0px 5px 18px -8px rgba(34, 60, 80, 0.68);
+}
+
+.box-information-teremochka {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem;
+  height: 23rem;
+  background-color: #69add2;
+}
+
+.directions-events {
+  background-color: #5b96b6;
+  width: 506px;
+  margin: 40px auto;
+  height: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  /* border-radius: 15px; */
+  /* width: 51rem; */
+  /* height: 34rem; */
+  background-color: #2b6299;
+  /* margin: auto; */
+  border-radius: 15px;
+}
+
+.box7 {
+  background-color: #5b96b6;
+  width: 12rem;
+  height: 9rem;
+}
+
+.shell-box3 {
+  display: flex;
+  align-items: flex-end;
+  width: 90rem;
+  justify-content: space-between;
+}
+
+.box6 {
+  width: 90rem;
+  height: 31rem;
+}
+
+.box8 {
+  height: 20rem;
+  width: 60rem;
+}
+
+.box9 {
+  width: 45rem;
+  height: 10rem;
+}
+
+.box14 {
+  height: 6rem;
+  width: 11rem;
+}
+
+.box13 {
+  height: 15rem;
+  width: 75rem;
+}
+
+.event-formats {
+  height: 15rem;
+  width: 60rem;
+  background-color: rgba(70, 73, 173, 0.7411764706);
+}
+
+.box15 {
+  height: 5rem;
+  width: 15rem;
+  background-color: #402d93;
+}
+
+.box12 {
+  background-color: #5b96b6;
+  width: 17rem;
+  height: 12rem;
+}
+
+.box10 {
+  height: 33rem;
+}
+
+.box11 {
+  margin: 50px auto;
+}
 
 .news {
   text-align: center;
@@ -1473,6 +1666,62 @@ body {
   flex-direction: column;
   padding: 2rem;
   justify-content: space-around;
+}
+
+.documents-heading {
+  text-align: center;
+  color: #2c3e50;
+}
+
+.container-documents {
+  max-width: 800px;
+  margin: 300px auto 200px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: 10px;
+  color: #2c3e50;
+}
+
+.address,
+.requisites {
+  margin-bottom: 20px;
+}
+
+.address p,
+.requisites p {
+  margin: 0;
+}
+
+.documents {
+  list-style: none;
+  padding: 0;
+}
+
+.documents li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.documents img {
+  margin-right: 10px;
+  width: 24px; /* Размер иконок */
+  height: 24px; /* Размер иконок */
+}
+
+.documents a {
+  text-decoration: none;
+  color: #3498db;
+}
+
+.documents a:hover {
+  text-decoration: underline;
 }
 
 .container-reports {

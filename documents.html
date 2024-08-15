@@ -6,53 +6,6 @@
 		<link rel="icon" href="./assets/icons/icon.png" type="image/png" />
 		<link rel="stylesheet" href="./assets/style/style.css" />
 		<title>Документы и реквизиты</title>
-		<style>
-			h1 {
-				text-align: center;
-				color: #2c3e50;
-			}
-			.container-documents {
-				max-width: 800px;
-				margin: 300px auto 200px;
-			}
-			.section {
-				margin-bottom: 30px;
-			}
-			.section h2 {
-				border-bottom: 2px solid #2c3e50;
-				padding-bottom: 10px;
-				color: #2c3e50;
-			}
-			.address,
-			.requisites {
-				margin-bottom: 20px;
-			}
-			.address p,
-			.requisites p {
-				margin: 0;
-			}
-			.documents {
-				list-style: none;
-				padding: 0;
-			}
-			.documents li {
-				margin-bottom: 10px;
-				display: flex;
-				align-items: center;
-			}
-			.documents img {
-				margin-right: 10px;
-				width: 24px; /* Размер иконок */
-				height: 24px; /* Размер иконок */
-			}
-			.documents a {
-				text-decoration: none;
-				color: #3498db;
-			}
-			.documents a:hover {
-				text-decoration: underline;
-			}
-		</style>
 	</head>
 	<body>
 		<div id="grid-container">
@@ -146,6 +99,28 @@
 						</li>
 						<li class="menu__item">
 							<a class="menu__link" href="./projects.html">Проекты</a>
+							<ul class="submenu">
+								<li>
+									<a href="./projects.html#Section-for-give-me-food"
+										>Дари еду</a
+									>
+								</li>
+								<li>
+									<a href="./projects.html#Section-for-teremochka"
+										>Кто, кто в теремочке живет</a
+									>
+								</li>
+								<li>
+									<a href="./projects.html#Section-adaptive-sports"
+										>Адаптивный спорт – равные возможности</a
+									>
+								</li>
+								<li>
+									<a href="./projects.html#Section-adaptive-tourism"
+										>Адаптивный туризм – путешествуем вместе</a
+									>
+								</li>
+							</ul>
 						</li>
 						<li class="menu__item">
 							<a class="menu__link" href="./news.html">Новости</a>
@@ -160,7 +135,7 @@
 				</nav>
 			</header>
 			<main class="container-documents">
-				<h1>Документы и реквизиты</h1>
+				<h1 class="documents-heading">Документы и реквизиты</h1>
 				<div class="section address">
 					<h2>Контактная информация</h2>
 					<p>

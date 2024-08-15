@@ -1,0 +1,45 @@
+.documents-heading {
+	text-align: center;
+	color: #2c3e50;
+}
+.container-documents {
+	max-width: 800px;
+	margin: 300px auto 200px;
+}
+.section {
+	margin-bottom: 30px;
+}
+.section h2 {
+	border-bottom: 2px solid #2c3e50;
+	padding-bottom: 10px;
+	color: #2c3e50;
+}
+.address,
+.requisites {
+	margin-bottom: 20px;
+}
+.address p,
+.requisites p {
+	margin: 0;
+}
+.documents {
+	list-style: none;
+	padding: 0;
+}
+.documents li {
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+}
+.documents img {
+	margin-right: 10px;
+	width: 24px; /* Размер иконок */
+	height: 24px; /* Размер иконок */
+}
+.documents a {
+	text-decoration: none;
+	color: #3498db;
+}
+.documents a:hover {
+	text-decoration: underline;
+}
