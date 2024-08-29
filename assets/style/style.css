@@ -1353,12 +1353,12 @@ body {
 }
 .modal_project-teremochka {
   display: flex;
-  margin: auto;
+  margin: 2rem auto;
   background-color: #0007ab;
   color: #ffffff;
   border-radius: 50px;
-  height: 2.5rem;
-  width: 16rem;
+  height: 2.8rem;
+  width: 19rem;
   justify-content: space-around;
   align-items: center;
   text-decoration: none;
