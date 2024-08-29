@@ -4,29 +4,31 @@
 	text-transform: uppercase;
 	font-size: 2rem;
 	@extend %font-family-aromo_700;
+
 	&__slide {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		border-radius: 62px;
 		margin: 2rem;
-		background: linear-gradient(
-			91deg,
-			rgba(156, 213, 226, 0.41),
-			rgba(215, 237, 249, 0.58),
-			rgba(211, 214, 248, 0.68),
-			rgba(210, 216, 249, 0.67),
-			rgba(212, 230, 247, 0.68),
-			rgba(196, 230, 238, 0.69)
-		);
+		background: linear-gradient(91deg,
+				rgba(156, 213, 226, 0.41),
+				rgba(215, 237, 249, 0.58),
+				rgba(211, 214, 248, 0.68),
+				rgba(210, 216, 249, 0.67),
+				rgba(212, 230, 247, 0.68),
+				rgba(196, 230, 238, 0.69));
 		box-shadow: -1px 6px 7px 0px rgba(34, 60, 80, 0.22);
 	}
+
 	&__img {
 		width: 40%;
 	}
+
 	&__title {
 		@extend %font-family-aromo_700;
 	}
+
 	&__content-slide {
 		display: flex;
 		flex-direction: column;
@@ -35,13 +37,16 @@
 		width: 23rem;
 		justify-content: space-between;
 	}
+
 	&__heading {
 		@extend %font-family-aromo_700;
 		font-size: 1.5rem;
 	}
+
 	&__paragraph {
 		@extend %font-family-aromo;
 	}
+
 	&__link {
 		display: flex;
 		background-color: #0007ab;
@@ -53,15 +58,18 @@
 		align-items: center;
 		@extend %font-family-aromo;
 		text-decoration: none;
+
 		&:hover {
 			background: #6cabfd;
 			color: $text-link-color;
 		}
+
 		&:focus {
 			background: rgb(4, 0, 255);
 			color: $text-link-color;
 		}
 	}
+
 	&-name {
 		width: 889px;
 		height: 200px;
@@ -73,6 +81,7 @@
 		text-align: center;
 		margin: 0 auto;
 	}
+
 	&-branch-item {
 		background-color: #5b96b6;
 		padding: 10px;
@@ -106,6 +115,7 @@
 	flex-direction: column;
 	align-items: center;
 	margin: 12rem 0 0;
+
 	&-title {
 		color: white;
 		padding: 20px;
@@ -116,6 +126,7 @@
 		box-shadow: 0px 5px 18px -8px rgba(34, 60, 80, 0.68);
 		background-color: #377382;
 	}
+
 	&-address-box1 {
 		display: flex;
 		height: 11rem;
@@ -123,6 +134,7 @@
 		width: 90rem;
 		justify-content: space-between;
 	}
+
 	&-branches-box3 {
 		display: flex;
 		width: 89rem;
@@ -133,7 +145,9 @@
 		align-items: center;
 	}
 }
+
 .container {
+
 	&__give-me-food,
 	&__teremochka {
 		margin: 15px 0;
@@ -154,6 +168,7 @@
 	justify-content: space-around;
 	box-shadow: 0px 5px 18px -8px rgba(34, 60, 80, 0.68);
 }
+
 .purpose {
 	background-color: #456e97;
 	text-align: center;
@@ -168,6 +183,7 @@
 	justify-content: space-around;
 	box-shadow: 0px 5px 18px -8px rgba(34, 60, 80, 0.68);
 }
+
 .box-information-teremochka {
 	display: flex;
 	justify-content: space-evenly;
@@ -255,4 +271,87 @@
 
 .box11 {
 	margin: 50px auto;
+}
+
+
+
+/* Стили для модального окна */
+.modal {
+	display: none;
+	/* Скрыто по умолчанию */
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+
+	/* Стили для контента модального окна */
+	&_content {
+		background-color: #fefefe;
+		margin: 15% auto;
+		padding: 20px;
+		border: 1px solid #888;
+		width: 70%;
+		text-align: center;
+	}
+
+	&_project-teremochka {
+		display: flex;
+		margin: auto;
+		background-color: #0007ab;
+		color: #ffffff;
+		border-radius: 50px;
+		height: 2.5rem;
+		width: 16rem;
+		justify-content: space-around;
+		align-items: center;
+		text-decoration: none;
+		cursor: pointer;
+		border: none;
+		/* Убираем рамку */
+		outline: none;
+		/* Убираем возможную обводку при фокусе */
+
+		&:hover {
+			background: #6cabfd;
+			color: #fff;
+		}
+	}
+
+	&_acceptance-of-sorrow,
+	&_children-speech-development {
+		margin: auto;
+		width: 50rem;
+		padding: 2rem 2rem;
+		text-align: justify;
+	}
+
+	&_container-content {
+		border-style: dashed;
+		border-color: #0089ab;
+		width: 60rem;
+		margin: 2rem auto;
+		padding: 1rem;
+	}
+}
+
+
+
+/* Стили для кнопки закрытия модального окна */
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
 }

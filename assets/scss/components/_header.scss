@@ -1,168 +1,176 @@
 .header {
-	background: url(/assets/icons/1612746203_34-p-fon-drim-art-goluboi-59.png)
-		no-repeat top/ cover;
-	display: grid;
-	grid-template-columns: repeat(8, 1fr);
-	grid-template-rows: repeat(2, 2fr);
-	grid-template-areas:
-		"N J A B B R  L P"
-		"N J A B B R  L P"
-		"N J A B B D  L P"
-		"N J A B B F  L P"
-		"W W W W W W  W W";
-	align-content: stretch;
-	justify-items: end;
-	align-items: center;
-	position: fixed;
-	z-index: 1000;
-	width: 100%;
-	height: 11rem;
-	-webkit-box-shadow: 0px 5px 5px -4px rgba(34, 60, 80, 0.33);
-	-moz-box-shadow: 0px 5px 5px -4px rgba(34, 60, 80, 0.33);
-	box-shadow: 0px 5px 5px -4px rgba(34, 60, 80, 0.33);
-	&__logo__img {
-		width: 15rem;
-	}
-	&__link {
-		grid-area: A;
-	}
-	&__title {
-		margin: 2rem 1rem 2rem 1rem;
-		width: 35rem;
-		text-align: center;
-		color: $accent-color;
-		grid-area: B;
-		@extend %rubik-family-text;
-	}
-	&__contact {
-		grid-area: R;
-		display: flex;
-		flex-direction: column;
-		width: 11.5rem;
-		height: 3rem;
-		justify-content: space-between;
-		align-items: flex-end;
-	}
-	&__email {
-		font-size: 0.7rem;
-		@extend %rubik-family-text;
-		color: $accent-color;
-	}
-	&__phone {
-		font-size: 1rem;
-		@extend %rubik-family-text;
-		color: $accent-color;
-	}
-	&__social {
-		grid-area: D;
-	}
-	&__donations {
-		grid-area: F;
-		font-size: 0.9rem;
-		color: $accent-color;
-		@extend %rubik-family-text;
-	}
-	/* 	&__donations {
-		grid-area: L;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		height: 5rem;
-		width: 16rem;
-		justify-content: space-between;
-	} */
-	/* 	&__btn {
-		background-color: $accent-color;
-		color: $text-link-color;
-		text-align: center;
-		width: 10rem;
-		height: 2.6rem;
-		padding: 0.2rem;
-		border-radius: 1rem;
-		transition: background-color 0.3s;
-		text-decoration: none;
-		&:hover {
-			background: #0987ee;
-			color: #fff;
-		}
-	} */
-	&__social a {
-		text-decoration: none; /* Убираем подчеркивание у всех ссылок внутри .header__social */
-	}
+  background: url(/assets/icons/1612746203_34-p-fon-drim-art-goluboi-59.png) no-repeat top/ cover;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(2, 2fr);
+  grid-template-areas:
+    "N J A B B R  L P"
+    "N J A B B R  L P"
+    "N J A B B D  L P"
+    "N J A B B F  L P"
+    "W W W W W W  W W";
+  align-content: stretch;
+  justify-items: end;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 11rem;
+  -webkit-box-shadow: 0px 5px 5px -4px rgba(34, 60, 80, 0.33);
+  -moz-box-shadow: 0px 5px 5px -4px rgba(34, 60, 80, 0.33);
+  box-shadow: 0px 5px 5px -4px rgba(34, 60, 80, 0.33);
+
+  &__logo__img {
+    width: 15rem;
+  }
+
+  &__link {
+    grid-area: A;
+  }
+
+  &__title {
+    margin: 2rem 1rem 2rem 1rem;
+    width: 35rem;
+    text-align: center;
+    color: $accent-color;
+    grid-area: B;
+    @extend %rubik-family-text;
+  }
+
+  &__contact {
+    grid-area: R;
+    display: flex;
+    flex-direction: column;
+    width: 11.5rem;
+    height: 3rem;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__email {
+    font-size: 0.7rem;
+    @extend %rubik-family-text;
+    color: $accent-color;
+  }
+
+  &__phone {
+    font-size: 1rem;
+    @extend %rubik-family-text;
+    color: $accent-color;
+  }
+
+  &__social {
+    grid-area: D;
+  }
+
+  &__donations {
+    grid-area: F;
+    font-size: 0.9rem;
+    color: $accent-color;
+    @extend %rubik-family-text;
+  }
+
+  &__social a {
+    text-decoration: none;
+  }
 }
+
 .menu {
-	width: 100%;
-	height: 3rem;
-	display: flex;
-	grid-area: W;
-	background-color: #f9fcff;
-	&__list {
-		display: flex;
-		text-align: center;
-		width: 100%;
-		align-items: center;
-		justify-content: space-evenly;
-	}
-	&__item {
-		list-style: none;
-		display: inline-block;
-	}
-	&__link {
-		font-size: 1.1rem;
-		position: relative;
-		color: $menu-color;
-		text-decoration: none;
-		@extend %rubik-family-text;
-		/* 	text-shadow: 1px 1px 2px rgb(143, 143, 143); */
-	}
-	a:hover::before {
-		transform: scale3d(1, 1, 1);
-	}
-	a::before {
-		content: "";
-		width: 100%;
-		height: 3px;
-		position: absolute;
-		left: 0;
-		bottom: -2px;
-		background: $menu-color;
-		transition: 0.5s transform ease;
-		transform: scale3d(0, 1, 1);
-		transform-origin: 0 50%;
-	}
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  grid-area: W;
+  background-color: #f9fcff;
+
+  &__list {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  &__item {
+    list-style: none;
+    display: inline-block;
+  }
+
+  &__link {
+    font-size: 1.1rem;
+    position: relative;
+    color: $menu-color;
+    text-decoration: none;
+    @extend %rubik-family-text;
+    /* 	text-shadow: 1px 1px 2px rgb(143, 143, 143); */
+  }
+
+  a:hover::before {
+    transform: scale3d(1, 1, 1);
+  }
+
+  a::before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    background: $menu-color;
+    transition: 0.5s transform ease;
+    transform: scale3d(0, 1, 1);
+    transform-origin: 0 50%;
+  }
 }
 
 .menu__item {
-	position: relative;
+  position: relative;
 }
 
+.menu__item.active .menu__link::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  background: #056594;
+  /* Цвет подчеркивания */
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+
+
 .submenu {
-	display: none;
-	position: absolute;
-	top: 100%;
-	left: 0;
-	background-color: #fff;
-	box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-	padding: 0;
-	list-style: none;
-	z-index: 1000;
-	min-width: 200px; /* Установите минимальную ширину для submenu */
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  list-style: none;
+  z-index: 1000;
+  min-width: 200px;
+  /* Установите минимальную ширину для submenu */
 }
 
 .submenu li {
-	padding: 8px 16px;
+  padding: 8px 16px;
 }
 
 .submenu li a {
-	text-decoration: none;
-	color: #333;
-	display: block;
+  text-decoration: none;
+  color: #333;
+  display: block;
 }
 
 .submenu li a:hover {
-	background-color: #f1f1f1; /* Добавьте фон при наведении */
+  background-color: #f1f1f1;
+  /* Добавьте фон при наведении */
 }
 
 .menu__item:hover .submenu {
-	display: block;
+  display: block;
 }
