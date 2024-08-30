@@ -1348,7 +1348,7 @@ body {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 70%;
+  width: 62%;
   text-align: center;
 }
 .modal_project-teremochka {
@@ -1357,8 +1357,8 @@ body {
   background-color: #0007ab;
   color: #ffffff;
   border-radius: 50px;
-  height: 2.8rem;
-  width: 19rem;
+  height: 3.7rem;
+  width: 25rem;
   justify-content: space-around;
   align-items: center;
   text-decoration: none;
@@ -1384,6 +1384,9 @@ body {
   width: 60rem;
   margin: 2rem auto;
   padding: 1rem;
+}
+.modal_ul {
+  margin: 2rem 0;
 }
 
 /* Стили для кнопки закрытия модального окна */
